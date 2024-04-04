@@ -1,4 +1,4 @@
-@extends('layouts.layoutadmin')
+@extends('layouts.teacherLayout')
 
 @section('title', 'Teacher')
 
