@@ -76,9 +76,9 @@
                                         <button class="btn btn-primary btn-lg" type="submit"
                                             style="font-size: 16px; border-radius: 1.5rem;">{{ __('Login')
                                             }}</button> <br>
-                                        <button class="btn btn-white btn-lg" type="submit"
+                                        {{-- <button class="btn btn-white btn-lg" type="submit"
                                             style="font-size: 16px; border-radius: 1.5rem; border: 1px solid gray;">
-                                            Log in with google</button>
+                                            Log in with google</button> --}}
 
                                         @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}"
