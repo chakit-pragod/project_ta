@@ -23,6 +23,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('/admin/announce', [HomeController::class, 'announce'])->name('layout.admin.announce');
 });
 
 //Teacher Routes List

@@ -8,8 +8,8 @@
     {{-- <link rel="icon" type="image/png" href="/assets/img/favicon.png"> --}}
     <title>@yield('title')</title>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <!-- Nucleo Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Nucleo Icons -->
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -17,6 +17,12 @@
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+    <style>
+        body{
+            font-family: "Noto Sans Thai", sans-serif;
+        }
+    </style>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -29,20 +35,20 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="#"
                 target="_blank">
-                <img src="/assets/img/logo-coc2.png" class="navbar-brand-img w-50 h-100" alt="main_logo">
+                <img src="/assets/img/logo-coc2.png" class="navbar-brand-img  h-100" alt="main_logo">
             </a>
         </div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ url('/admin/home') }}">
+                    <a class="nav-link " href="{{ url('/admin/announce') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-list-check text-primary text-sm opacity-10"></i>
                             {{-- <i class="fa-solid fa-list-check"></i> --}}
                         </div>
-                        <span class="nav-link-text ms-1">ยืนยันผู้ช่วยสอน</span>
+                        <span class="nav-link-text ms-1">จัดการประกาศ</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -52,7 +58,7 @@
                             <i class="fa-solid fa-eye text-warning text-sm opacity-10"></i>
                             {{-- <i class="fa-solid fa-eye"></i> --}}
                         </div>
-                        <span class="nav-link-text ms-1">ดูข้อมูลผู้ช่วยสอน</span>
+                        <span class="nav-link-text ms-1">จัดการข้อมูลผู้ช่วยสอน</span>
                     </a>
                 </li>
                 {{-- <li class="nav-item">

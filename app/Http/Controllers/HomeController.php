@@ -45,4 +45,14 @@ class HomeController extends Controller
     {
         return view('teacherHome');
     }
+
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function announce()
+    {
+        return view('layouts.admin.announce');
+    }
 }
