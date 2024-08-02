@@ -41,6 +41,12 @@ class HomeController extends Controller
         return view('adminHome', compact('announces'));
     }
 
+    public function showAnnouncements()
+    {
+        $announces = Announce::all(); // Fetch all announcements
+        return view('home', compact('announces'));
+    }
+
     public function addAnnounce(Request $request) {
         Log::info('Request received', $request->all());
     
