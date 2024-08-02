@@ -9,7 +9,7 @@
             <div class="card mb-4">
                 <div class="card-header">{{ __('Teacher') }}</div>
                 <div class="card-body">
-                    คำร้องการสมัครผู้ช่วยสอน
+                    ข้อมูลรายวิชา
                 </div>
             </div>
         </div>

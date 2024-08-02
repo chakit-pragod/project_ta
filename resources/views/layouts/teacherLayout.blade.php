@@ -5,11 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    {{-- <link rel="icon" type="image/png" href="/assets/img/favicon.png"> --}}
     <title>@yield('title')</title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-
     <!-- Nucleo Icons -->
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -18,6 +17,12 @@
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+    <style>
+    .g-sidenav-show {
+        font-family: "Noto Sans Thai", sans-serif;
+    }
+    </style>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -28,8 +33,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="#"
-                target="_blank">
+            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="/teacherreq">
                 <img src="/assets/img/logo-coc2.png" class="navbar-brand-img  h-100" alt="main_logo">
             </a>
         </div>
@@ -37,21 +41,21 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/dashboard.html">
+                    <a class="nav-link " href="/teacherreq">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">ยื่นความประสงค์ขอผู้ช่วยสนอ</span>
+                        <span class="nav-link-text ms-1">คำร้องการสมัครผู้ช่วยสอน</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/tables.html">
+                    <a class="nav-link" href="/subject">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">ดูข้อมูลผู้ช่วยสอน</span>
+                        <span class="nav-link-text ms-1">ข้อมูลรายวิชา</span>
                     </a>
                 </li>
                 {{-- <li class="nav-item">
@@ -124,24 +128,22 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#"
-                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    {{ __('Logout') }}
+                                </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
                         @endguest
 
                         <!-- Start Hamburger menu -->
