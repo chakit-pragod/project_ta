@@ -9,7 +9,7 @@
                 <!-- <div class="card-header">{{ __('Admin') }}</div> -->
                 <div class="card-body">
                     <h4>
-                        จัดการประกาศ
+                        จัดการข้อมูลผู้ช่วยสอน
                     </h4>
                 </div>
             </div>

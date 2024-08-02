@@ -1,6 +1,6 @@
-@extends('layouts.adminLayout')
+@extends('layouts.taLayout')
 
-@section('title', 'announce')
+@section('title', 'request')
 
 @section('content')
     <div class="row">
@@ -9,7 +9,7 @@
                 <!-- <div class="card-header">{{ __('Admin') }}</div> -->
                 <div class="card-body">
                     <h4>
-                        จัดการประกาศ
+                        ข้อมูลรายวิชาผู้ช่วยสอน
                     </h4>
                 </div>
             </div>

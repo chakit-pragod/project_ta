@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class TaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -16,35 +16,34 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
+    /// TA ROLE
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function request()
+    {
+        return view('layouts.ta.request');
+    }
+
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function statusRequest()
+    {
+        return view('layouts.ta.statusRequest');
+    }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function taSubject()
     {
-        return view('home');
+        return view('layouts.ta.taSubject');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function adminHome()
-    {
-        return view('adminHome');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function teacherHome()
-    {
-        return view('teacherHome');
-    }
-
-
 }

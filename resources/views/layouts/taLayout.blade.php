@@ -28,8 +28,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="#"
-                target="_blank">
+            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="/home">
                 <img src="/assets/img/logo-coc2.png" class="navbar-brand-img  h-100" alt="main_logo">
             </a>
         </div>
@@ -37,7 +36,7 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ url('/home') }}">
+                    <a class="nav-link " href="{{ url('/request') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -46,21 +45,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/tables.html">
+                    <a class="nav-link" href="/statusrequest">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">ข้อมูลรายวิชาผู้ข้วยสอน</span>
+                        <span class="nav-link-text ms-1">คำร้องการสมัครผู้ช่วยสอน</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/billing.html">
+                    <a class="nav-link " href="/tasubject">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">อัพโหลดเอกสารเบิกจ่าย</span>
+                        <span class="nav-link-text ms-1">ข้อมูลรายวิชาผู้ช่วยสอน</span>
                     </a>
                 </li>
                 {{-- <li class="nav-item">
