@@ -39,8 +39,7 @@
                         <div class="mb-3">
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i> เลือกเดือน
+                                    data-bs-toggle="dropdown" aria-expanded="false"> เลือกเดือน
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <li><a class="dropdown-item" href="#">มิถุนายน</a></li>
