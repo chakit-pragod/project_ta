@@ -24,6 +24,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/statusrequest', [TaController::class, 'statusRequest'])->name('layout.ta.statusRequest');
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');
     Route::get('/home', [HomeController::class, 'showAnnouncements'])->name('home');
+    Route::get('/attendances', [TaController::class, 'attendances'])->name('layout.ta.attendances');
+
 
 });
 
