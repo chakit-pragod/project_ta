@@ -18,7 +18,7 @@ class TeacherController extends Controller
 
 
     /// TA ROLE
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -26,6 +26,11 @@ class TeacherController extends Controller
     public function subject()
     {
         return view('layouts.teacher.subject');
+    }
+
+    public function ta_detail()
+    {
+        return view('layouts.teacher.ta_detail');
     }
 
 

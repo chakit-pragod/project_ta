@@ -1,7 +1,8 @@
 @extends('layouts.teacherLayout')
 
 @section('title', 'Teacher')
-@section('break', 'ข้อมูลรายวิชา')
+@section('break', 'รายวิชาทั้งหมด')
+@section('break2', 'ข้อมูลผู้ช่วยสอน')
 
 @section('content')
     {{-- <div class="container"> --}}
@@ -9,7 +10,7 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header">
-                    <h1>รายวิชาทั้งหมด</h1>
+                    <h1>ข้อมูลรายวิชา</h1>
                 </div>
                 <div class="card-body">
                     <div>
@@ -17,9 +18,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ลำดับ</th>
-                                    <th scope="col">รหัสวิชา</th>
-                                    <th scope="col">ชื่อวิชา</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">ชื่อ</th>
+                                    <th scope="col">นามสกุล</th>
+                                    <th scope="col">รหัสนักศึกษา</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,7 +28,7 @@
                                     <th scope="row">1</th>
                                     <td>SC312003</td>
                                     <td>Data Structure</td>
-                                    <td><a class="fw-bold" href="{{ url('/subject/Ta detail') }}">รายละเอียดผู้ช่วยสอน</a></td>
+                                    <td><a class="fw-bold" href="#">รายละเอียดผู้ช่วยสอน</a></td>
                                 </tr>
                             </tbody>
                         </table>
