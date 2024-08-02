@@ -21110,7 +21110,7 @@ fieldset:disabled .btn {
   }
 
   .dropdown:not(.dropdown-hover) .dropdown-menu {
-    margin-top: 40px !important;
+    margin-top: 20px !important;
   }
 
   .dropdown .dropdown-menu:before {

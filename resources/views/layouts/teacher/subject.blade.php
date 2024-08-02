@@ -1,6 +1,7 @@
 @extends('layouts.teacherLayout')
 
 @section('title', 'Teacher')
+@section('break', 'ข้อมูลรายวิชา')
 
 @section('content')
 {{-- <div class="container"> --}}

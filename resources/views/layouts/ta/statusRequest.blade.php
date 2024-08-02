@@ -1,6 +1,7 @@
 @extends('layouts.taLayout')
 
 @section('title', 'request')
+@section('break', 'สถานะคำร้องการสมัครผู้ช่วยสอน')
 
 @section('content')
     <div class="row">
