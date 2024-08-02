@@ -29,6 +29,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::post('/admin/add-announce', [HomeController::class, 'addAnnounce'])->name('admin.addAnnounce');
     // Route::get('/admin/announce', [AdminController::class, 'announce'])->name('layout.admin.announce');
     Route::get('/admin/tausers', [AdminController::class, 'taUsers'])->name('layout.admin.taUsers');
 });
