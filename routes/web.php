@@ -41,6 +41,7 @@ Route::middleware(['auth', 'user-access:teacher'])->group(function () {
 
     Route::get('/teacherreq', [HomeController::class, 'teacherHome'])->name('teacher.home');
     Route::get('/subject', [TeacherController::class, 'subject'])->name('layout.teacher.subject');
+    Route::get('/subject/Ta detail', [TeacherController::class, 'ta_detail'])->name('ta_detail');
 });
 
 Route::fallback(function () {

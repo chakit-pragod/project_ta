@@ -15,7 +15,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <td scope="col">#</td>
+                                    <th scope="col">ลำดับ</th>
                                     <th scope="col">รหัสนักศึกษา</th>
                                     <th scope="col">ชื่อ-นามสกุล</th>
                                     <th scope="col">รายวิชาที่สมัคร</th>
@@ -27,24 +27,14 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                </tr>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
+                                    <td>1</td>
+                                    <td>643021342-5</td>
+                                    <td>สุพัตรา แพงจันทร์</td>
+                                    <td>SC312003 Data Structure</td>
+                                    <td>10-06-2567</td>
+                                    <td>อนุมัติ</td>
+                                    <td>15-06-2567</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
