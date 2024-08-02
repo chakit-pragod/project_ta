@@ -28,9 +28,13 @@ class TeacherController extends Controller
         return view('layouts.teacher.subject');
     }
 
-    public function ta_detail()
+    public function subjectDetail()
     {
-        return view('layouts.teacher.ta_detail');
+        return view('layouts.teacher.subjectDetail');
+    }
+    public function taDetail()
+    {
+        return view('layouts.teacher.taDetail');
     }
 
 

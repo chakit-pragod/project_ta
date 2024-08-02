@@ -11,7 +11,7 @@
                 <div class="card-header">{{ __('Teacher') }}</div>
                 <div class="card-body">
                     คำร้องการสมัครผู้ช่วยสอน
-                    <div>
+                    <div class="container shadow-lg bg-body rounded p-5">
                         <table class="table">
                             <thead>
                                 <tr>

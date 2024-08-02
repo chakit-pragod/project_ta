@@ -12,7 +12,7 @@
                     <h1>รายวิชาทั้งหมด</h1>
                 </div>
                 <div class="card-body">
-                    <div>
+                    <div class="container shadow-lg bg-body rounded p-5">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -27,7 +27,7 @@
                                     <th scope="row">1</th>
                                     <td>SC312003</td>
                                     <td>Data Structure</td>
-                                    <td><a class="fw-bold" href="{{ url('/subject/Ta detail') }}">รายละเอียดผู้ช่วยสอน</a></td>
+                                    <td><a class="fw-bold" href="{{ url('/subject/subjectDetail') }}">รายละเอียดผู้ช่วยสอน</a></td>
                                 </tr>
                             </tbody>
                         </table>
