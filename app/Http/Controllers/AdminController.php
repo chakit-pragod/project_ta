@@ -47,4 +47,14 @@ class AdminController extends Controller
     {
         return view('layouts.admin.detailsTa');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function detailsByid()
+    {
+        return view('layouts.admin.detailsByid');
+    }
 }
