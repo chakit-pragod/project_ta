@@ -33,6 +33,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // Route::get('/admin/announce', [AdminController::class, 'announce'])->name('layout.admin.announce');
     Route::get('/admin/tausers', [AdminController::class, 'taUsers'])->name('layout.admin.taUsers');
     Route::get('/admin/detailsta', [AdminController::class, 'detailsTa'])->name('layout.admin.detailsTa');
+    Route::get('/admin/detailsta/id', [AdminController::class, 'detailsByid'])->name('layout.admin.detailsByid');
+
 
 });
 
