@@ -1,43 +1,31 @@
 @extends('layouts.taLayout')
 
-@section('title', 'Teaching assistant')
+@section('title', 'Teaching Assistant')
 @section('break', 'ประกาศต่างๆ')
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card mb-4">
-            <!-- <div class="card-header">{{ __('Teaching Assistant') }}</div> -->
             <div class="card-body">
-                <div class="announce bg-primary p-3 col d-flex align-items-center align-content-center" >
-                    <h4 class="d-flex align-items-center align-conten-center text-white">ประกาศ</h4>
+                <div class="card bg-primary text-white p-3">
+                    <h4 class="mb-0">ประกาศ</h4>
                 </div>
+                @foreach($announces as $announce)
+                <div class="card mt-3"> 
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-paperclip me-2"></i>
+                                {{ $announce->title }}
+                            </h5>
+                            <p class="card-text">
+                                {{ $announce->content }} <!-- Assuming content is plain text -->
+                            </p>
+                        </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </div>
 @endsection
-
-
-
-{{-- @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (auth()->user()->is_admin == 1)
-                        <a href="{{ url('admin/routes') }}">Admin</a>
-                    @else
-                        <div class="panel-heading">Normal User</div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection --}}
-
-

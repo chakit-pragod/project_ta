@@ -32,7 +32,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="/admin">
+            <a class="navbar-brand m-0 p-0 h-100 w-100 d-flex align-items-center justify-content-center" href="/home">
                 <img src="/assets/img/logo-coc2.png" class="navbar-brand-img  h-100" alt="main_logo">
             </a>
         </div>
@@ -43,16 +43,16 @@
                     <a class="nav-link " href="{{ url('/request') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-collection text-primary text-sm opacity-10"></i>
+                            <i class="ni ni-send text-primary text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">ยื่นคำร้องรับสมัครผู้ช่วยสอน</span>
+                        <span class="nav-link-text ms-1">ยื่นคำร้องสมัครผู้ช่วยสอน</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="{{ url('/statusrequest') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-collection text-primary text-sm opacity-10"></i>
+                            <i class="ni ni-box-2 text-primary text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">คำร้องการสมัครผู้ช่วยสอน</span>
                     </a>
