@@ -8,9 +8,9 @@
     <div class="row">
         <div class="col-12">
             <div class="card mb-4">
-                <div class="card-header">{{ __('Teacher') }}</div>
+                <!-- <div class="card-header">{{ __('Teacher') }}</div> -->
                 <div class="card-body">
-                    คำร้องการสมัครผู้ช่วยสอน
+                    <h4>คำร้องการสมัครผู้ช่วยสอน</h4>
                     <div class="container shadow-lg bg-body rounded p-5">
                         <table class="table">
                             <thead>
@@ -32,7 +32,17 @@
                                     <td>สุพัตรา แพงจันทร์</td>
                                     <td>SC312003 Data Structure</td>
                                     <td>10-06-2567</td>
-                                    <td>อนุมัติ</td>
+                                    <td><span class="badge bg-success">อนุมัติ</span></td>
+                                    <td>15-06-2567</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>643021316-6</td>
+                                    <td>ชาคริต ปรากฎ</td>
+                                    <td>SC312003 Data Structure</td>
+                                    <td>10-06-2567</td>
+                                    <td><span class="badge bg-secondary">เลือก</span></td>
                                     <td>15-06-2567</td>
                                     <td></td>
                                 </tr>

@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header">
-                    <h1>ข้อมูลรายวิชา</h1>
+                    <h4>ข้อมูลรายวิชา</h4>
                     <div class="container shadow-lg bg-body rounded p-5">
                         <p><span class="fw-bold text-dark">ชื่อวิชา : </span>SC312003 Database Management System and Database Design</p>
                         <p><span class="fw-bold text-dark">ปีการศึกษา : </span>2/2567</p>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1>ข้อมูลผู้ช่วยสอน</h1>
+                    <h4>ข้อมูลผู้ช่วยสอน</h4>
                     <div class="container shadow-lg bg-body rounded p-5">
                         <table class="table">
                             <thead>
