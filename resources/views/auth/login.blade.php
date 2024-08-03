@@ -73,17 +73,17 @@
 
                                 <div class="col-12">
                                     <div class="d-grid">
-                                        <button class="btn btn-primary btn-lg" type="submit"
-                                            style="font-size: 16px; border-radius: 1.5rem;">{{ __('Login')
+                                        <button class="btn  btn-lg" type="submit"
+                                            style="font-size: 16px; border-radius: 1rem; background-color:#0676be; color:#ffffff;">{{ __('Login')
                                             }}</button> <br>
                                         {{-- <button class="btn btn-white btn-lg" type="submit"
                                             style="font-size: 16px; border-radius: 1.5rem; border: 1px solid gray;">
                                             Log in with google</button> --}}
 
                                         @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}"
+                                        <!-- <a class="btn btn-link" href="{{ route('password.request') }}"
                                             class="link-secondary text-decoration-none">{{ __('Forgot Your
-                                            Password?') }}</a>
+                                            Password?') }}</a> -->
                                         @endif
 
                                     </div>
