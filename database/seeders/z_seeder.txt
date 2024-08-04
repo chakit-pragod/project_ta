@@ -1,0 +1,11 @@
+php artisan db:seed --class=CreateUsersSeeder  
+
+php artisan db:seed --class=EmployeeTableSeeder
+
+php artisan db:seed --class=TeachersTableSeeder
+
+php artisan db:seed --class=CurriculumsTableSeeder 
+
+php artisan db:seed --class=MajorTableSeeder  
+
+
