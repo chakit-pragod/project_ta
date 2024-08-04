@@ -23,4 +23,18 @@ class Teachers extends Model
         'email',
         'user_id'
     ];
+
+    /**
+     * Get the user that owns the employee.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function curriculums()
+    {
+        return $this->hasOne(Curriculums::class);
+    }
+    
 }

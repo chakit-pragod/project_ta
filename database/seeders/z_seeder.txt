@@ -1,3 +1,5 @@
+php artisan migrate:refresh
+
 php artisan db:seed --class=CreateUsersSeeder  
 
 php artisan db:seed --class=EmployeeTableSeeder
@@ -8,4 +10,8 @@ php artisan db:seed --class=CurriculumsTableSeeder
 
 php artisan db:seed --class=MajorTableSeeder  
 
+php artisan db:seed --class=SubjectsSeeder
 
+php artisan db:seed --class=SemstersTableSeeder
+
+php artisan db:seed --class=ClassTypeTableSeeder

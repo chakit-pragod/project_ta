@@ -21,4 +21,12 @@ class Employee extends Model
         'phone',
         'user_id',
     ];
+
+    /**
+     * Get the user that owns the employee.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

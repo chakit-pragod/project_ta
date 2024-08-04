@@ -20,4 +20,22 @@ class Curriculums extends Model
         'name_en',
         'head_teacher_id',
     ];
+
+    /**
+     * Get the user that owns the employee.
+     */
+    public function teachers()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function major()
+    {
+        return $this->belongsToMany(Major::class);
+    }
+
+    public function subjects()
+    {
+        return $this->hasMany(Subjects::class);
+    }
 }

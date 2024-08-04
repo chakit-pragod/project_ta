@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Major extends Model
+class Semsters extends Model
 {
     use HasFactory;
 
@@ -14,18 +14,12 @@ class Major extends Model
      *
      * @var array
      */
-    protected $table = 'major';
+    protected $table = 'semsters';
     protected $fillable = [
         'name_th',
         'name_en',
-        'major_type',
-        'cur_id',
+        'head_teacher_id',
     ];
-
-    public function curriculums()
-    {
-        return $this->belongsToMany(Curriculum::class);
-    }
 
     
 }
