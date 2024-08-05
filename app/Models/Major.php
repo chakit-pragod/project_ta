@@ -31,4 +31,9 @@ class Major extends Model
     {
         return $this->belongsTo(Courses::class);
     }
+
+    public function classes()
+    {
+        return $this->belongsTo(Classes::class);
+    }
 }

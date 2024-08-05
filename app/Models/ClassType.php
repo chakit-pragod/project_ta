@@ -19,5 +19,8 @@ class ClassType extends Model
         'title',
     ];
 
-    
+    public function classes()
+    {
+        return $this->hasMany(Classes::class);
+    }
 }

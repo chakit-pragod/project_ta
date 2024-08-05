@@ -13,6 +13,23 @@ return new class extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
+            $table->integer('section_num');
+            $table->string('title', 45);
+            $table->unsignedBigInteger('class_type_id');
+            $table->integer('open_num');
+            $table->integer('enrolled_num');
+            $table->integer('available_num'); 
+            $table->unsignedBigInteger('teachers_id');
+            $table->unsignedBigInteger('courses_id'); 
+            $table->unsignedBigInteger('semesters_id'); 
+            $table->unsignedBigInteger('major_id');
+
+            $table->foreign('class_type_id')->references('id')->on('class_type');
+            $table->foreign('teachers_id')->references('id')->on('teachers');
+            $table->foreign('courses_id')->references('id')->on('courses');
+            $table->foreign('semesters_id')->references('id')->on('semesters');
+            $table->foreign('major_id')->references('id')->on('major');
+
             $table->timestamps();
         });
     }

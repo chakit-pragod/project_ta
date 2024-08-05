@@ -24,6 +24,8 @@ php artisan migrate:fresh
 
 12. php artisan db:seed --class=CoursesSeeder
 
-13.
+13. php artisan db:seed --class=ClassesSeeder
+
+14. 
 
 //แก้ semster

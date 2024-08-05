@@ -44,4 +44,9 @@ class Courses extends Model
     {
         return $this->belongsTo(Curriculums::class);
     }
+
+    public function classes()
+    {
+        return $this->belongsTo(Classes::class);
+    }
 }

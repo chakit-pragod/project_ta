@@ -42,4 +42,8 @@ class Teachers extends Model
         return $this->hasMany(Courses::class);
     }
     
+    public function classes()
+    {
+        return $this->belongsToMany(Classes::class);
+    }
 }
