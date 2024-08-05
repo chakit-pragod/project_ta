@@ -20,6 +20,8 @@ php artisan migrate:fresh
 
 10. php artisan db:seed --class=StudentsTableSeeder
 
-11.
+11. php artisan db:seed --class=TasTableSeeder
+
+12.
 
 //แก้ semster
