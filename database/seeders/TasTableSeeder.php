@@ -17,12 +17,12 @@ class TasTableSeeder extends Seeder
     {
         $tas = [
             [
-                'student_id' => '643021316-6',
+                'student_id' => '6430213166',
                 'user_id' => 2, 
 
             ],
             [
-                'student_id' => '643021342-5',
+                'student_id' => '6430213425',
                 'user_id' => 2,
             ],
         ];
