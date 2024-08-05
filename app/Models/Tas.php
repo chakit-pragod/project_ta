@@ -25,4 +25,24 @@ class Tas extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function disbursements() 
+    {
+        return $this->belongsTO(Disbursements::class) ;   
+    }
+
+    public function course_ta() 
+    {
+        return $this->belongsTO(CourseTas::class) ;   
+    }
+
+    public function attendences()
+    {
+        return $this->hasMany(Attendences::class);
+    }
+
+    public function extra_attendences()
+    {
+        return $this->hasOne(ExtraAttendences::class);
+    }
+
 }

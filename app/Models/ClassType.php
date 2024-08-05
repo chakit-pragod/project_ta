@@ -28,4 +28,9 @@ class ClassType extends Model
     {
         return $this->hasMany(Teaching::class);
     }
+
+    public function extra_attendences()
+    {
+        return $this->hasMany(ExtraAttendances::class);
+    }
 }

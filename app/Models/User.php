@@ -68,4 +68,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Tas::class);
     }
+
+    public function attendences()
+    {
+        return $this->hasMany(Attendences::class);
+    }
 }

@@ -35,4 +35,14 @@ class Teaching extends Model
     {
         return $this->belongsTo(Teachers::class);
     }
+
+    public function attendences()
+    {
+        return $this->hasMany(Attendences::class);
+    }
+
+    public function extra_teaching()
+    {
+        return $this->hasMany(ExtraTeaching::class);
+    }
 }

@@ -49,4 +49,19 @@ class Courses extends Model
     {
         return $this->belongsTo(Classes::class);
     }
+
+    public function course_ta() 
+    {
+        return $this->hasMany(CourseTas::class);
+    }
+
+    public function course_teacher() 
+    {
+        return $this->hasMany(CourseTeacher::class);
+    }
+
+    public function extra_attendences()
+    {
+        return $this->hasOne(ExtraAttendences::class);
+    }
 }

@@ -57,4 +57,9 @@ class Classes extends Model
     {
         return $this->belongsTo(Teaching::class);
     }
+
+    public function extra_teaching()
+    {
+        return $this->hasMany(ExtraTeaching::class);
+    }
 }
