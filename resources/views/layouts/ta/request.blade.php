@@ -18,7 +18,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" placeholder="ชื่อ" >
+                                <input type="text" class="form-control" placeholder="ชื่อ" value="{{Auth::user()->name}}">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="นามสกุล">
