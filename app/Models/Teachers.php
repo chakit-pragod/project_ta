@@ -36,5 +36,10 @@ class Teachers extends Model
     {
         return $this->hasOne(Curriculums::class);
     }
+
+    public function courses()
+    {
+        return $this->hasMany(Courses::class);
+    }
     
 }

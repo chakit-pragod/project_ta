@@ -27,5 +27,8 @@ class Major extends Model
         return $this->belongsToMany(Curriculums::class);
     }
 
-    
+    public function courses()
+    {
+        return $this->belongsTo(Courses::class);
+    }
 }

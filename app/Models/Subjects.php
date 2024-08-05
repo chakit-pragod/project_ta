@@ -49,4 +49,9 @@ class Subjects extends Model
     {
         return $this->hasMany(Students::class);
     }
+
+    public function courses()
+    {
+        return $this->belongsTo(Courses::class);
+    }
 }

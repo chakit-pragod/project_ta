@@ -43,4 +43,9 @@ class Curriculums extends Model
     {
         return $this->belongsTo(CurriculumsSubjects::class);
     }
+
+    public function courses()
+    {
+        return $this->hasMany(Courses::class);
+    }
 }

@@ -22,6 +22,8 @@ php artisan migrate:fresh
 
 11. php artisan db:seed --class=TasTableSeeder
 
-12.
+12. php artisan db:seed --class=CoursesSeeder
+
+13.
 
 //แก้ semster
