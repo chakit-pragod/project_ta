@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Subjects;
+
 
 class TaController extends Controller
 {
@@ -25,7 +27,8 @@ class TaController extends Controller
      */
     public function request()
     {
-        return view('layouts.ta.request');
+        $subjects = Subjects::all();
+        return view('layouts.ta.request', compact('subjects'));
     }
 
      /**

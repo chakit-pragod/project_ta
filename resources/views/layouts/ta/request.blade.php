@@ -11,29 +11,38 @@
             <div class="card-body">
 
                 <div class="container">
-                    <h4 class="mb-4">ยืนคำร้องสมัครผู้ช่วยสอน</h4>
+                    <h4 class="mb-4">ยื่นคำร้องสมัครผู้ช่วยสอน</h4>
 
                     <form>
                         <h5 class="mb-3">แบบฟอร์มกรอกรายละเอียดผู้ช่วยสอน</h5>
 
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" placeholder="ชื่อ" value="{{Auth::user()->name}}">
+                                <input type="text" class="form-control" placeholder="ชื่อ" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->fName : 'N/A' }}" disabled>
                             </div>
                             <div class="col-md-4">
-                                <input type="text" class="form-control" placeholder="นามสกุล">
+                                <input type="text" class="form-control" placeholder="นามสกุล" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->lName : 'N/A' }}" disabled>
                             </div>
                             <div class="col-md-4">
-                                <input type="tel" class="form-control" placeholder="รหัสนักศึกษา">
+                                <input type="tel" class="form-control" placeholder="รหัสนักศึกษา" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->id : 'N/A' }}" disabled>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="รหัสประจำตัวประชาชน">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="รหัสประจำตัวประชาชน" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->card_id : 'N/A' }}" disabled>
                             </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->phone : 'N/A' }}" disabled>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="อีเมล" 
+                                value="{{ Auth::user()->students ? Auth::user()->students->email : 'N/A' }}" disabled>
                             </div>
                             
                         </div>
@@ -45,9 +54,13 @@
                             <div class="col-md-6">
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>เลือกบัญชีธนาคาร</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">02 ธนาคารกรุงเทพ</option>
+                                    <option value="2">04 ธนาคารกสิกรไทย</option>
+                                    <option value="3">06 ธนาคารกรุงไทย</option>
+                                    <option value="4">11 ธนาคารทหารไทยธนชาติ</option>
+                                    <option value="5">14 ธนาคารไทยพาณิชย์</option>
+                                    <option value="6">25 ธนาคารกรุงศรีอยุธยา</option>
+                                    <option value="7">30 ธนาคารออมสิน</option>
                                 </select>
                             </div>
                         </div>
@@ -55,9 +68,9 @@
                         <div class="mb-3">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>เลือกรายวิชาที่ต้องการสมัคร</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                @foreach ($subjects as $subject)
+                                    <option value="{{ $subject->id }}">{{ $subject->name_th }}</option>
+                                @endforeach
                             </select>
                         </div>
 
