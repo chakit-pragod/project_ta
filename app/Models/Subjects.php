@@ -22,7 +22,7 @@ class Subjects extends Model
      * @var array
      */
     protected $fillable = [
-        'subjects_id',
+        'id',
         'name_th',
         'name_en',
         'credits',
@@ -40,9 +40,13 @@ class Subjects extends Model
         return $this->belongsTo(Curriculums::class);
     }
 
+    public function curriculums_subjects()
+    {
+        return $this->hasMany(CurriculumsSubjects::class);
+    }
+
     public function students()
     {
-        return $this->belongsTo(Students::class);
+        return $this->hasMany(Students::class);
     }
-    
 }

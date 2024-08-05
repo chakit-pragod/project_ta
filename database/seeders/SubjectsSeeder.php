@@ -20,7 +20,7 @@ class SubjectsSeeder extends Seeder
 
         if ($curriculums) {
             Subjects::create([
-                'subjects_id' => 'SC312003',
+                'id' => 'SC312003',
                 'name_th' => 'ระบบจัดการฐานข้อมูลและการออกแบบฐานข้อมูล',
                 'name_en' => 'Database Management System and Database Design',
                 'credits' => 3,

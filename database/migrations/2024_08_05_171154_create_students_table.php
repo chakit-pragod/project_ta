@@ -12,17 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
             $table->string('fName', 1024);
             $table->string('lName', 1024);
-            $table->string('card_id', 13);
+            $table->string('card_id', 13); 
             $table->string('phone', 11);
             $table->string('email', 30);
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('subjects_id')->constrained('subjects');
+            $table->unsignedBigInteger('user_id');
+            $table->string('subjects_id');
             $table->boolean('type_ta');
-            $table->string('uploadfile')->nullable();
+            $table->string('uploadfile'); 
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('subjects_id')->references('id')->on('subjects');
         });
     }
 

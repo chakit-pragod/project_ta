@@ -1,19 +1,25 @@
-php artisan migrate:refresh
+php artisan migrate:fresh
 
-php artisan db:seed --class=CreateUsersSeeder  
+1. php artisan db:seed --class=CreateUsersSeeder  
 
-php artisan db:seed --class=EmployeeTableSeeder
+2. php artisan db:seed --class=EmployeeTableSeeder
 
-php artisan db:seed --class=TeachersTableSeeder
+3. php artisan db:seed --class=TeachersTableSeeder
 
-php artisan db:seed --class=CurriculumsTableSeeder 
+4. php artisan db:seed --class=CurriculumsTableSeeder 
 
-php artisan db:seed --class=MajorTableSeeder  
+5. php artisan db:seed --class=MajorTableSeeder  
 
-php artisan db:seed --class=SubjectsSeeder
+6. php artisan db:seed --class=SubjectsSeeder
 
-php artisan db:seed --class=SemstersTableSeeder
+7. php artisan db:seed --class=SemestersTableSeeder
 
-php artisan db:seed --class=ClassTypeTableSeeder
+8. php artisan db:seed --class=ClassTypeTableSeeder
+
+9. php artisan db:seed --class=CurriculumsSubjectsSeeder
+
+10. php artisan db:seed --class=StudentsTableSeeder
+
+11.
 
 //แก้ semster

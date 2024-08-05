@@ -17,26 +17,28 @@ class StudentsTableSeeder extends Seeder
     {
         $students = [
             [
+                'id' => '643021316-6',
                 'fName' => 'ชาคริต',
                 'lName' => 'ปรากฎ',
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',
                 'user_id' => 2,
-                'subject_id' => 1,
+                'subjects_id' => 'SC312003',
                 'type_ta' => false,
-                'uploadfile' => null,
+                'uploadfile' => 'null',
             ],
             [
+                'id' => '643021342-5',
                 'fName' => 'สุพัตรา',
                 'lName' => 'แพงจันทร์',
                 'card_id' => '9876543210987',
                 'phone' => '0887654321',
                 'email' => 'supattra.pa@kkumail.com',
                 'user_id' => 2,
-                'subject_id' => 1,
+                'subjects_id' => 'SC312003',
                 'type_ta' => false,
-                'uploadfile' => null,
+                'uploadfile' => 'null',
             ],
         ];
 

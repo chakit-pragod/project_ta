@@ -36,6 +36,11 @@ class Curriculums extends Model
 
     public function subjects()
     {
-        return $this->hasMany(Subjects::class);
+        return $this->belongsToMany(Subjects::class);
+    }
+
+    public function curriculums_subjects()
+    {
+        return $this->belongsTo(CurriculumsSubjects::class);
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Semsters extends Model
+class Semesters extends Model
 {
     use HasFactory;
 
@@ -14,11 +14,12 @@ class Semsters extends Model
      *
      * @var array
      */
-    protected $table = 'semsters';
+    protected $table = 'semesters';
     protected $fillable = [
-        'name_th',
-        'name_en',
-        'head_teacher_id',
+        'year',
+        'semesters',
+        'start_date',
+        'end_date'
     ];
 
     
