@@ -24,7 +24,7 @@
                                 <input type="text" class="form-control" placeholder="นามสกุล">
                             </div>
                             <div class="col-md-4">
-                                <input type="tel" class="form-control" placeholder="เบอร์โทรศัพท์">
+                                <input type="tel" class="form-control" placeholder="รหัสนักศึกษา">
                             </div>
                         </div>
 
@@ -33,8 +33,9 @@
                                 <input type="text" class="form-control" placeholder="รหัสประจำตัวประชาชน">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="ชื่อเล่น">
+                                <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์">
                             </div>
+                            
                         </div>
 
                         <div class="row mb-3">
