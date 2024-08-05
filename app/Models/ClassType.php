@@ -23,4 +23,9 @@ class ClassType extends Model
     {
         return $this->hasMany(Classes::class);
     }
+
+    public function teaching()
+    {
+        return $this->hasMany(Teaching::class);
+    }
 }

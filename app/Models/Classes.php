@@ -52,4 +52,9 @@ class Classes extends Model
     {
         return $this->hasOne(Major::class);
     }
+
+    public function teaching()
+    {
+        return $this->belongsTo(Teaching::class);
+    }
 }
