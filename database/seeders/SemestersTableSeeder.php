@@ -15,8 +15,8 @@ class SemestersTableSeeder extends Seeder
         Semesters::create([
             'year' => 2567,
             'semesters' => 1,
-            'start_date' => '2023-01-10',
-            'end_date' => '2023-05-15',
+            'start_date' => '2023-06-17',
+            'end_date' => '2023-10-30',
         ]);
     }
 }
