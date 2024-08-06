@@ -25,27 +25,15 @@ class CreateUsersSeeder extends Seeder
                 'password' => bcrypt('1234'),
             ],
             [
-                'name'=> 'User',
-                'email'=> 'user@user.com',
+                'name'=> 'chakit pragod',
+                'email'=> 'chakit.p@kkumail.com',
                 'type' => '0',
                 'password' => bcrypt('1234'),
             ],
             [
-                'name'=> 'Teacher',
-                'email'=> 'teacher@teacher.com',
+                'name'=> 'Pusadee',
+                'email'=> 'pusadee@kku.ac.th',
                 'type' => '2',
-                'password' => bcrypt('1234'),
-            ],
-            [
-                'name'=> 'Ta',
-                'email'=> 'ta@ta.com',
-                'type' => '0',
-                'password' => bcrypt('1234'),
-            ],
-            [
-                'name'=> 'nongjan',
-                'email'=> 'nongjan@kkumail.com',
-                'type' => '0',
                 'password' => bcrypt('1234'),
             ],
 

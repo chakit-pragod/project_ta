@@ -12,9 +12,13 @@
                 <div class="card-header">
                     <h4>ข้อมูลรายวิชา</h4>
                     <div class="container shadow-lg bg-body rounded p-5">
-                        <p><span class="fw-bold text-dark">ชื่อวิชา : </span>SC312003 Database Management System and Database Design</p>
+                        @foreach ($subjects as $subject)
+                        <p><span class="fw-bold text-dark">ชื่อวิชา : </span>{{ $subject->subject_id }} {{ $subject->name_en }}</p>
+                        @endforeach
                         <p><span class="fw-bold text-dark">ปีการศึกษา : </span>2/2567</p>
-                        <p><span class="fw-bold text-dark">อาจารย์ประจำวิชา : </span>ผศ. ดร. พุธษดี ศิริแสงตระกูล</p>
+                        @foreach($teachers as $teacher)
+                        <p><span class="fw-bold text-dark">อาจารย์ประจำวิชา : </span>{{ $teacher->position }} {{ $teacher->degree }} {{ $teacher->name }}</p>
+                        @endforeach
                         <p><span class="fw-bold text-dark">หน่วยกิต : </span>3</p>
                     </div>
                 </div>
@@ -34,10 +38,12 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    @foreach($students as $std)
                                     <th scope="row">1</th>
                                     <td>ชาคริต</td>
                                     <td>ปรากฏ</td>
                                     <td>643021316-6</td>
+                                    @endforeach
                                     <td>ปริญญาตรี</td>
                                     <td><a class="fw-bold" href="{{ url('/subject/subjectDetail/taDetail') }}">ตรวจสอบข้อมูล</a></td>
                                 </tr>

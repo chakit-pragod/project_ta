@@ -22,9 +22,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>SC312003</td>
-                                    <td>Database Management System and Database Design</td>
+                                    @foreach ($subjects as $subject)
+                                    <th scope="row">{{ $subject->id }}</th>
+                                    <td>{{ $subject->subject_id }}</td>
+                                    <td>{{ $subject->name_en }}</td>
+                                    @endforeach
                                     <td><a class="fw-bold" href="{{ url('/subject/subjectDetail') }}">รายละเอียดผู้ช่วยสอน</a></td>
                                 </tr>
                             </tbody>

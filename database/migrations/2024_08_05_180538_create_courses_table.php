@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->char('status', 1);
-            $table->string('subjects_id', 10); 
+            $table->unsignedBigInteger('subjects_id'); 
             $table->unsignedBigInteger('owner_teacher_id'); 
             $table->unsignedBigInteger('semesters_id'); 
             $table->unsignedBigInteger('major_id'); 

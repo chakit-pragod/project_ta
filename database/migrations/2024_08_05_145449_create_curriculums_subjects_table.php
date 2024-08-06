@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('curriculums_subjects', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('cur_id');
-            $table->string('subjects_id');
+            $table->unsignedBigInteger('subjects_id');
+            
             $table->foreign('cur_id')->references('id')->on('curriculums');
             $table->foreign('subjects_id')->references('id')->on('subjects');
             $table->timestamps();

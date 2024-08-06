@@ -22,7 +22,7 @@ class Subjects extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
+        'subject_id',
         'name_th',
         'name_en',
         'credits',

@@ -44,9 +44,8 @@
                                 <input type="text" class="form-control" placeholder="อีเมล" 
                                 value="{{ Auth::user()->students ? Auth::user()->students->email : 'N/A' }}" disabled>
                             </div>
-                            
                         </div>
-
+                        
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control" placeholder="กรอกเลขบัญชีธนาคาร">

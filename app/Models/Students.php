@@ -12,7 +12,7 @@ class Students extends Model
     protected $table = 'students';
 
     protected $fillable = [
-        'id',
+        'student_id',
         'fName',
         'lName',
         'card_id',
