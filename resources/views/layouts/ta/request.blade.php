@@ -19,15 +19,15 @@
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="ชื่อ" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->fName : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->users ? Auth::user()->fName : 'N/A' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="นามสกุล" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->lName : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->users ? Auth::user()->lName : 'N/A' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="tel" class="form-control" placeholder="รหัสนักศึกษา" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->student_id : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->users ? Auth::user()->student_id : 'N/A' }}" disabled>
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="อีเมล" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->email : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->users ? Auth::user()->email : 'N/A' }}" disabled>
                             </div>
                         </div>
                         

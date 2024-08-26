@@ -17,7 +17,7 @@ class CoursesSeeder extends Seeder
         $courses = [
             [
                 'status' => 'A', 
-                'subjects_id' => 'SC312003', 
+                'subject_id' => 1, 
                 'owner_teacher_id' => 1, 
                 'semesters_id' => 1,
                 'major_id' => 1,
@@ -25,7 +25,7 @@ class CoursesSeeder extends Seeder
             ],
             [
                 'status' => 'A',
-                'subjects_id' => 'SC312003', 
+                'subject_id' => 1, 
                 'owner_teacher_id' => 1, 
                 'semesters_id' => 1,
                 'major_id' => 1, 

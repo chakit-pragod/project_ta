@@ -27,7 +27,7 @@ class StudentsTableSeeder extends Seeder
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',
-                'user_id' => $subjects->id,
+                'user_id' => 2,
                 'subjects_id' => $subjects->id,
                 'type_ta' => false,
                 'uploadfile' => 'null',
