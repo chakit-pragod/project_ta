@@ -32,7 +32,6 @@ class StudentsTableSeeder extends Seeder
                 'type_ta' => false,
                 'uploadfile' => 'null',
             ],
-<<<<<<< HEAD
             // [
             //     'student_id' => '643021342-5',
             //     'fName' => 'สุพัตรา',
@@ -45,20 +44,6 @@ class StudentsTableSeeder extends Seeder
             //     'type_ta' => false,
             //     'uploadfile' => 'null',
             // ],
-=======
-            [
-                'student_id' => '643021342-5',
-                'fName' => 'สุพัตรา',
-                'lName' => 'แพงจันทร์',
-                'card_id' => '9876543210987',
-                'phone' => '0887654321',
-                'email' => 'supattra.pa@kkumail.com',
-                'user_id' => $subjects->id,
-                'subjects_id' => $subjects->id,
-                'type_ta' => false,
-                'uploadfile' => 'null',
-            ],
->>>>>>> 1533fbc09ac855e93fc409ab61affe1ce2ac3b87
         ];
 
         foreach ($students as $key => $value) {
