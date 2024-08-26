@@ -19,8 +19,8 @@ class CoursesSeeder extends Seeder
                 'status' => 'A', 
                 'subjects_id' => 'SC312003', 
                 'owner_teacher_id' => 1, 
-                'semesters_id' => 1, 
-                'major_id' => 1, 
+                'semesters_id' => 1,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             [

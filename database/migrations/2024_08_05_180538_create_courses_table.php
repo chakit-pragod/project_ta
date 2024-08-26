@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->char('status', 1);
-            $table->unsignedBigInteger('subjects_id'); 
+            $table->unsignedBigInteger('subject_id'); 
             $table->unsignedBigInteger('owner_teacher_id'); 
             $table->unsignedBigInteger('semesters_id'); 
             $table->unsignedBigInteger('major_id'); 
             $table->unsignedBigInteger('cur_id');
 
-            $table->foreign('subjects_id')->references('id')->on('subjects');
+            $table->foreign('subject_id')->references('id')->on('subjects');
             $table->foreign('owner_teacher_id')->references('id')->on('teachers');
             $table->foreign('semesters_id')->references('id')->on('semesters');
             $table->foreign('major_id')->references('id')->on('major');

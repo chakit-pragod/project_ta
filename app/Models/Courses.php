@@ -13,7 +13,7 @@ class Courses extends Model
 
     protected $fillable = [
         'status',
-        'subjects_id',
+        'subject_id',
         'owner_teacher_id',
         'semesters_id',
         'major_id',
@@ -62,6 +62,6 @@ class Courses extends Model
 
     public function extra_attendences()
     {
-        return $this->hasOne(ExtraAttendences::class);
+        // return $this->hasOne(ExtraAttendences::class);
     }
 }
