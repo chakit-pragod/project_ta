@@ -80,11 +80,11 @@
                                             style="font-size: 16px; border-radius: 1.5rem; border: 1px solid gray;">
                                             Log in with google</button> --}}
 
-                                        @if (Route::has('password.request'))
-                                        <!-- <a class="btn btn-link" href="{{ route('password.request') }}"
+                                        {{-- @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}"
                                             class="link-secondary text-decoration-none">{{ __('Forgot Your
-                                            Password?') }}</a> -->
-                                        @endif
+                                            Password?') }}</a>
+                                        @endif --}}
 
                                     </div>
                                 </div>

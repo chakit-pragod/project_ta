@@ -17,6 +17,7 @@ class StudentsTableSeeder extends Seeder
     public function run(): void
     {
         $subjects = Subjects::first();
+        $students = Students::first();
 
         $students = [
             [
@@ -26,7 +27,7 @@ class StudentsTableSeeder extends Seeder
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',
-                'user_id' => 2,
+                'user_id' => $subjects->id,
                 'subjects_id' => $subjects->id,
                 'type_ta' => false,
                 'uploadfile' => 'null',
@@ -38,7 +39,7 @@ class StudentsTableSeeder extends Seeder
                 'card_id' => '9876543210987',
                 'phone' => '0887654321',
                 'email' => 'supattra.pa@kkumail.com',
-                'user_id' => 5,
+                'user_id' => $subjects->id,
                 'subjects_id' => $subjects->id,
                 'type_ta' => false,
                 'uploadfile' => 'null',

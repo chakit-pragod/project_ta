@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input type="tel" class="form-control" placeholder="รหัสนักศึกษา" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->id : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->students ? Auth::user()->students->student_id : 'N/A' }}" disabled>
                             </div>
                         </div>
 
