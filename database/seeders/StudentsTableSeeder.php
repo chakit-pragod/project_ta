@@ -31,18 +31,18 @@ class StudentsTableSeeder extends Seeder
                 'type_ta' => false,
                 'uploadfile' => 'null',
             ],
-            [
-                'student_id' => '643021342-5',
-                'fName' => 'สุพัตรา',
-                'lName' => 'แพงจันทร์',
-                'card_id' => '9876543210987',
-                'phone' => '0887654321',
-                'email' => 'supattra.pa@kkumail.com',
-                'user_id' => 5,
-                'subjects_id' => $subjects->id,
-                'type_ta' => false,
-                'uploadfile' => 'null',
-            ],
+            // [
+            //     'student_id' => '643021342-5',
+            //     'fName' => 'สุพัตรา',
+            //     'lName' => 'แพงจันทร์',
+            //     'card_id' => '9876543210987',
+            //     'phone' => '0887654321',
+            //     'email' => 'supattra.pa@kkumail.com',
+            //     'user_id' => 5,
+            //     'subjects_id' => $subjects->id,
+            //     'type_ta' => false,
+            //     'uploadfile' => 'null',
+            // ],
         ];
 
         foreach ($students as $key => $value) {
