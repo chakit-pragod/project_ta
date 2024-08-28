@@ -20,14 +20,13 @@ return new class extends Migration
             $table->string('phone', 11);
             $table->string('email', 30);
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('subjects_id');
+            $table->unsignedBigInteger('subject_id');
             $table->boolean('type_ta');
             $table->string('uploadfile'); 
             $table->timestamps();
 
-
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('subjects_id')->references('id')->on('subjects');
+            $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
 

@@ -19,7 +19,7 @@ class Students extends Model
         'phone',
         'email',
         'user_id',
-        'subjects_id',
+        'subject_id',
         'type_ta',
         'uploadfile',
     ];
