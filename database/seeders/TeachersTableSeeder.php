@@ -25,7 +25,7 @@ class TeachersTableSeeder extends Seeder
                 'fname' => 'Pusadee',
                 'lname' => 'Seresangtakul',
                 'email' => 'pusadee@kku.ac.th',
-                'user_id' => 3,
+                'user_id' => 2,
             ]);
         } else {
             $this->command->info('No user found. Please run UserSeeder first.');

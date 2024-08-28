@@ -19,30 +19,30 @@
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="ชื่อ" 
-                                value="{{ Auth::user()->users ? Auth::user()->fName : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->fname ?? 'N/A : ชื่อ' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="นามสกุล" 
-                                value="{{ Auth::user()->users ? Auth::user()->lName : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->lname ?? 'N/A : นามสกุล' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="tel" class="form-control" placeholder="รหัสนักศึกษา" 
-                                value="{{ Auth::user()->users ? Auth::user()->student_id : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->student_id ?? 'N/A : นักศึกษา' }}" disabled>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="รหัสประจำตัวประชาชน" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->card_id : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->students ? Auth::user()->students->card_id : 'N/A : รหัสประจำตัวประชาชน' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" 
-                                value="{{ Auth::user()->students ? Auth::user()->students->phone : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->students ? Auth::user()->students->phone : 'N/A : เบอร์โทรศัพท์' }}" disabled>
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="อีเมล" 
-                                value="{{ Auth::user()->users ? Auth::user()->email : 'N/A' }}" disabled>
+                                value="{{ Auth::user()->email ?? 'N/A : อีเมล' }}" disabled>
                             </div>
                         </div>
                         
