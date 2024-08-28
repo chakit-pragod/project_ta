@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('prefix'); 
             $table->string('position'); 
             $table->string('degree'); 
-            $table->string('name'); 
+            $table->string('fname');
+            $table->string('lname');
             $table->string('email'); 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();

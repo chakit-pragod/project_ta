@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            // $table->string('student_id', length:11);
-            // $table->string('lname');
+            $table->string('fname');
+            $table->string('lname');
+            $table->string('student_id', length:11)->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('type')->default(false); // 0 = ta , 1 = admin, 2 = teacher 

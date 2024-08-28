@@ -19,7 +19,8 @@ class EmployeeTableSeeder extends Seeder
         $user = User::first(); 
         if ($user) {
             Employee::create([
-                'name' => 'Satida Wetchatsart',
+                'fname' => 'Satida',
+                'lname' => 'Wetchatsart',
                 'email' => 'satida@admin.com',
                 'phone' => '0812345678',
                 'user_id' => 1,

@@ -19,10 +19,11 @@ class TeachersTableSeeder extends Seeder
         $user = User::first(); 
         if ($user) {
             Teachers::create([
-                'prefix' => 'นาง',
-                'position' => 'ผศ.',
-                'degree' => 'ดร.',
-                'name' => 'พุธษดี ศิริแสงตระกูล',
+                'prefix' => 'Ms.',
+                'position' => 'Asst.',
+                'degree' => 'Prof.',
+                'fname' => 'Pusadee',
+                'lname' => 'Seresangtakul',
                 'email' => 'pusadee@kku.ac.th',
                 'user_id' => 3,
             ]);

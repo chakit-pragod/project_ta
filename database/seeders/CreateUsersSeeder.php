@@ -19,24 +19,27 @@ class CreateUsersSeeder extends Seeder
         
         $user = [
             [
-                "name"=> "Admin",
-                // 'student_id'=>'',
+                "fname"=> "Admin",
+                "lname"=> "Admin",
+                'student_id'=>null,
                 'email'=> 'admin@admin.com',
                 'type' => '1',
                 'password' => bcrypt('1234'),
-            ],
+            ],  
             [
-                'name'=> 'chakit pragod',
-                // 'student_id'=>'643021316-6',
-                'email'=> 'chakit.p@kkumail.com',
-                'type' => '0',
+                'fname'=> 'Pusadee',
+                'lname'=>'Seresangtakul',
+                'student_id'=>null,
+                'email'=> 'pusadee@kku.ac.th',
+                'type' => '2',
                 'password' => bcrypt('1234'),
             ],
             [
-                'name'=> 'Pusadee',
-                // 'student_id'=>'',
-                'email'=> 'pusadee@kku.ac.th',
-                'type' => '2',
+                'fname'=> 'chakit',
+                'lname'=> 'pragod',
+                'student_id'=>'643021316-6',
+                'email'=> 'chakit.p@kkumail.com',
+                'type' => '0',
                 'password' => bcrypt('1234'),
             ],
 

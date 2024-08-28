@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Students;
 use App\Models\Subjects;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class StudentsTableSeeder extends Seeder
     public function run(): void
     {
         $subjects = Subjects::first();
-        $students = Students::first();
+        $users = User::first();
 
         $students = [
             [
@@ -27,7 +28,7 @@ class StudentsTableSeeder extends Seeder
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',
-                'user_id' => $subjects->id,
+                'user_id' => $users->id+2,
                 'subjects_id' => $subjects->id,
                 'type_ta' => false,
                 'uploadfile' => 'null',
