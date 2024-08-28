@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('prefix'); 
             $table->string('position'); 
-            $table->string('degree'); 
+            $table->string('degree')->nullable(); 
             $table->string('fname');
             $table->string('lname');
             $table->string('email'); 
