@@ -68,7 +68,7 @@
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>เลือกรายวิชาที่ต้องการสมัคร</option>
                                 @foreach ($subjects as $subject)
-                                    <option value="{{ $subject->id }}">{{ $subject->name_th }}</option>
+                                    <option value="{{ $subject->id }}">{{ $subject->subject_id }} {{ $subject->name_en }}</option>
                                 @endforeach
                             </select>
                         </div>
