@@ -17,7 +17,7 @@ class CreateUsersSeeder extends Seeder
     public function run(): void
     {
         
-        $user = [
+        $users = [
             [
                 "fname"=> "Admin",
                 "lname"=> "Admin",
@@ -340,9 +340,12 @@ class CreateUsersSeeder extends Seeder
             ],
         ];
 
-        foreach ($user as $key => $value) {
-            User::create($value);
-        }
+        // foreach ($users as $key => $value) {
+        //     User::create($value);
+        // }
 
+        foreach ($users as $user) {
+            DB::table('users')->insert($user);
+        }
     }
 }

@@ -16,20 +16,33 @@ class EmployeeTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::first(); 
-        if ($user) {
-            Employee::create([
-                'fname' => 'Satida',
-                'lname' => 'Wetchatsart',
-                'email' => 'satida@admin.com',
-                'phone' => '0812345678',
-                'user_id' => 1,
-            ]);
-        } else {
-            $this->command->info('No user found. Please run UserSeeder first.');
-        }
-        // foreach ($employee as $key => $value) {
-        //     Employee::create($employee);
+        // $employee = [
+        //     'fname' => 'Satida',
+        //     'lname' => 'Wetchatsart',
+        //     'email' => 'satida@admin.com',
+        //     'phone' => '0812345678',
+        //     // 'user_id' => 1,
+        // ];
+
+        // // foreach ($employees as $employee) {
+        // $user = DB::table('users')->where('email', $employee['email'])->first();
+
+        // if ($user) {
+        //     DB::table('employee')->insert([
+        //         'fname' => $employee['fname'],
+        //         'lname' => $employee['lname'],
+        //         'email' => $employee['email'],
+        //         'phone' => $employee['phone'],
+        //         'user_id' => $user->id,
+        //     ]);
         // }
+        Employee::create([
+            'fname' => 'Satida',
+            'lname' => 'Wetchatsart',
+            'email' => 'satida@admin.com',
+            'phone' => '0812345678',
+            'user_id' => 1,
+        ]);
+
     }
 }
