@@ -59,4 +59,14 @@ class TaController extends Controller
     {
         return view('layouts.ta.attendances');
     }
+
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function disbursements()
+    {
+        return view('layouts.ta.disbursements');
+    }
 }

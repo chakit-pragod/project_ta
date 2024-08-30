@@ -14,16 +14,12 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('student_id', 11);
-            $table->string('prefix', 256);
             $table->string('fName', 1024);
             $table->string('lName', 1024);
             $table->string('card_id', 13);
             $table->string('phone', 11);
             $table->string('email', 30);
             $table->boolean('type_ta');
-            $table->string('bookbank_id');
-            $table->string('bank_name');
-            $table->string('uploadfile');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
             $table->timestamps();

@@ -13,21 +13,22 @@ class Students extends Model
 
     protected $fillable = [
         'student_id',
-        'prefix',
         'fName',
         'lName',
         'card_id',
         'phone',
         'email',
+        'type_ta',
+        'dis_id',
         'user_id',
         'subject_id',
-        'type_ta',
-        'bookbank_id',
-        'bank_name',
-        'uploadfile',
     ];
 
 
+    public function disbursements()
+    {
+        return $this->hasOne(Disbursements::class);
+    }
     public function users()
     {
         return $this->belongsTo(User::class);
