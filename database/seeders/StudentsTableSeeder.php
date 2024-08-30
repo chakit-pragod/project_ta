@@ -31,7 +31,6 @@ class StudentsTableSeeder extends Seeder
                 'user_id' => $users->id+2, //+2
                 'subject_id' => $subjects->id,
                 'type_ta' => false,
-                'uploadfile' => 'null',
             ],
             // [
             //     'student_id' => '643021342-5',
