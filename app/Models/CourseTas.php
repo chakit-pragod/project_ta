@@ -10,13 +10,13 @@ class CourseTas extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ta_id',
+        'student_id',
         'course_id',
     ];
 
-    public function tas()
+    public function student()
     {
-        return $this->hasOne(Tas::class);
+        return $this->hasOne(Students::class);
     }
 
     public function courses()

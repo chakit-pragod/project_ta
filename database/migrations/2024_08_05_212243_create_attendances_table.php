@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('note');
             $table->unsignedBigInteger('user_id'); 
             $table->unsignedBigInteger('teaching_id');
-            $table->unsignedBigInteger('ta_id');
+            $table->unsignedBigInteger('student_id');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('teaching_id')->references('id')->on('teaching')->onDelete('cascade');
-            $table->foreign('ta_id')->references('id')->on('tas')->onDelete('cascade');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -16,13 +16,15 @@ return new class extends Migration
             $table->string('student_id', 11);
             $table->string('fName', 1024);
             $table->string('lName', 1024);
-            $table->string('card_id', 13); 
+            $table->string('card_id', 13);
             $table->string('phone', 11);
             $table->string('email', 30);
+            $table->boolean('type_ta');
+            $table->string('bookbank_id');
+            $table->string('bank_name');
+            $table->string('uploadfile');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
-            $table->boolean('type_ta');
-            $table->string('uploadfile'); 
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

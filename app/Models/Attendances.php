@@ -15,7 +15,7 @@ class Attendances extends Model
         'note',
         'user_id',
         'teaching_id',
-        'ta_id',
+        'student_id',
     ];
 
     public function user()
@@ -28,8 +28,8 @@ class Attendances extends Model
         return $this->hasOne(Teaching::class);
     }
 
-    public function tas()
+    public function student()
     {
-        return $this->hasOne(Tas::class);
+        return $this->hasOne(Students::class);
     }
 }
