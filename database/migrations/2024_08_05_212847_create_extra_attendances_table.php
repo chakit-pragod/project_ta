@@ -17,11 +17,11 @@ return new class extends Migration
             $table->dateTime('start_work');
             $table->integer('duration');
             $table->unsignedBigInteger('class_type_id');
-            $table->unsignedBigInteger('ta_id');
+            $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('course_id');
 
             $table->foreign('class_type_id')->references('id')->on('class_type')->onDelete('cascade');
-            $table->foreign('ta_id')->references('id')->on('tas')->onDelete('cascade');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->timestamps();
         });

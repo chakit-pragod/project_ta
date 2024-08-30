@@ -13,6 +13,7 @@ class Students extends Model
 
     protected $fillable = [
         'student_id',
+        'prefix',
         'fName',
         'lName',
         'card_id',
@@ -21,6 +22,8 @@ class Students extends Model
         'user_id',
         'subject_id',
         'type_ta',
+        'bookbank_id',
+        'bank_name',
         'uploadfile',
     ];
 
@@ -35,8 +38,8 @@ class Students extends Model
         return $this->belongsToMany(Subjects::class);
     }
 
-    public function tas()
+    public function student()
     {
-        return $this->hasMany(Tas::class);
+        return $this->hasMany(Students::class);
     }
 }

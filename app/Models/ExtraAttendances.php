@@ -14,7 +14,7 @@ class ExtraAttendances extends Model
         'start_work',
         'duration',
         'class_type_id',
-        'ta_id',
+        'student_id',
         'course_id',
     ];
 
@@ -23,9 +23,9 @@ class ExtraAttendances extends Model
         return $this->hasOne(ExtraAttendances::class);
     }
 
-    public function tas()
+    public function student()
     {
-        return $this->hasOne(Tas::class);
+        return $this->hasOne(Students::class);
     }
 
     public function courses()

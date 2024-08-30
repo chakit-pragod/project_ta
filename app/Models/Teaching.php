@@ -38,7 +38,7 @@ class Teaching extends Model
 
     public function attendences()
     {
-        return $this->hasMany(Attendences::class);
+        return $this->hasMany(Attendances::class);
     }
 
     public function extra_teaching()
