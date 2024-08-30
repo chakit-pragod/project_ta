@@ -17,6 +17,12 @@
                         <h5 class="mb-3">แบบฟอร์มกรอกรายละเอียดผู้ช่วยสอน</h5>
 
                         <div class="row mb-3">
+                            <div class="col-md-2">
+                                <select class="form-control" disabled>
+                                    <option value="Mr" {{ Auth::user()->prefix == 'Mr' ? 'selected' : '' }}>นาย</option>
+                                    <option value="Miss" {{ Auth::user()->prefix == 'Miss' ? 'selected' : '' }}>นางสาว</option>
+                                </select>
+                            </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" placeholder="ชื่อ" 
                                 value="{{ Auth::user()->fname ?? 'N/A : ชื่อ' }}" disabled>
