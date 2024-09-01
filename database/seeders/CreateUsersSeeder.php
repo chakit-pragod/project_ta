@@ -460,12 +460,12 @@ class CreateUsersSeeder extends Seeder
             ],
         ];
 
-        // foreach ($users as $key => $value) {
-        //     User::create($value);
-        // }
-
-        foreach ($users as $user) {
-            DB::table('users')->insert($user);
+        foreach ($users as $key => $value) {
+            User::create($value);
         }
+
+        // foreach ($users as $user) {
+        //     DB::table('users')->insert($user);
+        // }
     }
 }

@@ -44,7 +44,7 @@ class CurriculumsTableSeeder extends Seeder
                 'name_th' => 'ความมั่นคงปลอดภัยไซเบอร์ ปริญญาตรี',
                 'name_en' => 'B.Sc. (Cybersecurity)',
                 'head_teacher_id' => 31, //อาจารย์เพชร
-            ]
+            ],
         ];
 
         foreach ($curriculums as $curriculum) {
