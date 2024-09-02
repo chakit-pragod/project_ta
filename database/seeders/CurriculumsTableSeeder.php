@@ -23,7 +23,7 @@ class CurriculumsTableSeeder extends Seeder
             [
                 'name_th' => 'วิทยาการคอมพิวเตอร์ ปริญญาตรี',
                 'name_en' => 'B.Sc. (Computer Science)',
-                'head_teacher_id' => 15, //อาจารย์คำรณ id = 4
+                'head_teacher_id' => 18, //อาจารย์คำรณ id = 4
             ],
             [
                 'name_th' => 'เทคโนโลยีสารสนเทศ ปริญญาตรี',

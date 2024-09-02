@@ -20,6 +20,7 @@ class Major extends Model
         'name_en',
         'major_type',
         'cur_id',
+        'status',
     ];
 
     public function curriculums()

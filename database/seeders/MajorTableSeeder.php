@@ -18,15 +18,80 @@ class MajorTableSeeder extends Seeder
     {
         $curriculums = Curriculums::first();
 
-        if ($curriculums) {
-            Major::create([
+        $majors = [
+            [
+                'name_th' => 'ปริญญาตรี ภาคปกติ',
+                'name_en' => 'Bachelor`s degree, Normal program',
+                'major_type' => 'N',
+                'cur_id' => 1,
+                'status' => 'A'
+            ],
+            [
                 'name_th' => 'ปริญญาตรี ภาคพิเศษ',
                 'name_en' => 'Bachelor`s degree, Special program',
                 'major_type' => 'S',
-                'cur_id' => $curriculums->id,
-            ]);
-        } else {
-            $this->command->info('No curriculum found. Please run CurriculumSeeder first.');
+                'cur_id' => 1,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคปกติ',
+                'name_en' => 'Bachelor`s degree, Normal program',
+                'major_type' => 'N',
+                'cur_id' => 2,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคพิเศษ',
+                'name_en' => 'Bachelor`s degree, Special program',
+                'major_type' => 'S',
+                'cur_id' => 2,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคปกติ',
+                'name_en' => 'Bachelor`s degree, Normal program',
+                'major_type' => 'N',
+                'cur_id' => 3,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคพิเศษ',
+                'name_en' => 'Bachelor`s degree, Special program',
+                'major_type' => 'S',
+                'cur_id' => 3,
+                'status' => 'A'
+            ],[
+                'name_th' => 'ปริญญาตรี ภาคปกติ',
+                'name_en' => 'Bachelor`s degree, Normal program',
+                'major_type' => 'N',
+                'cur_id' => 4,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคพิเศษ',
+                'name_en' => 'Bachelor`s degree, Special program',
+                'major_type' => 'S',
+                'cur_id' => 4,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคปกติ',
+                'name_en' => 'Bachelor`s degree, Normal program',
+                'major_type' => 'N',
+                'cur_id' => 5,
+                'status' => 'A'
+            ],
+            [
+                'name_th' => 'ปริญญาตรี ภาคพิเศษ',
+                'name_en' => 'Bachelor`s degree, Special program',
+                'major_type' => 'S',
+                'cur_id' => 5,
+                'status' => 'A'
+            ],
+        ];
+
+        foreach ($majors as $key => $value) {
+            Major::create($value);
         }
     }
 }
