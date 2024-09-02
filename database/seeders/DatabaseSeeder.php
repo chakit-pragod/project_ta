@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Subjects;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 
@@ -24,5 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EmployeeTableSeeder::class);
         $this->call(TeachersTableSeeder::class);
         $this->call(CurriculumsTableSeeder::class);
+        $this->call(SubjectsSeeder::class);
     }
 }

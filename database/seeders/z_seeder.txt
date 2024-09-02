@@ -1,7 +1,7 @@
 php artisan migrate:fresh
 php artisan db:seed
 
-1. php artisan db:seed --class=CreateUsersSeeder  
+1. php artisan db:seed --class=CreateUsersSeeder
 
 2. php artisan db:seed --class=EmployeeTableSeeder
 
