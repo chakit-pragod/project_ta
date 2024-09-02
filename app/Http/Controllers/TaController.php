@@ -94,8 +94,8 @@ class TaController extends Controller
             ['user_id' => $user->id],
             [
                 'prefix' => $user->prefix,
-                'fName' => $user->fname,
-                'lName' => $user->lname,
+                'fname' => $user->fname,
+                'lname' => $user->lname,
                 'student_id' => $user->student_id,
                 'email' => $user->email,
                 'card_id' => $user->card_id,

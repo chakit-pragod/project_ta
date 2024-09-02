@@ -13,13 +13,14 @@ class Students extends Model
 
     protected $fillable = [
         'student_id',
-        'fName',
-        'lName',
+        'prefix',
+        'fname',
+        'lname',
         'card_id',
         'phone',
         'email',
         'type_ta',
-        'dis_id',
+        // 'dis_id',
         'user_id',
         'subject_id',
     ];
