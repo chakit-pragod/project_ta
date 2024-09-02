@@ -4,7 +4,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TaController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\RequestController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+// Route::resource('ta',RequestController::class);
+// Route::resource('admin',AdminController::class);
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -20,7 +25,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
+    Route::resource('companie',RequestController::class);
+    // Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
     Route::get('/statusrequest', [TaController::class, 'statusRequest'])->name('layout.ta.statusRequest');
     Route::get('/disbursements', [TaController::class, 'disbursements'])->name('layout.ta.disbursements');
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');
@@ -51,6 +57,9 @@ Route::middleware(['auth', 'user-access:teacher'])->group(function () {
     Route::get('/subject/subjectDetail', [TeacherController::class, 'subjectDetail'])->name('subjectDetail');
     Route::get('/subject/subjectDetail/taDetail', [TeacherController::class, 'taDetail'])->name('taDetail');
 });
+
+Route::get('/ta/request', [RequestController::class, 'create'])->name('request.create');
+Route::post('/ta/request', [RequestController::class, 'store'])->name('request.store');
 
 Route::fallback(function () {
     return view('error\404');

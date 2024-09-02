@@ -20,7 +20,7 @@ class TaController extends Controller
 
 
     /// TA ROLE
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -31,7 +31,7 @@ class TaController extends Controller
         return view('layouts.ta.request', compact('subjects'));
     }
 
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -50,7 +50,7 @@ class TaController extends Controller
         return view('layouts.ta.taSubject');
     }
 
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -60,7 +60,7 @@ class TaController extends Controller
         return view('layouts.ta.attendances');
     }
 
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -69,4 +69,6 @@ class TaController extends Controller
     {
         return view('layouts.ta.disbursements');
     }
+
+    
 }

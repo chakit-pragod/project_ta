@@ -12,46 +12,37 @@
                     <div class="container">
                         <h4 class="mb-4">ยื่นคำร้องสมัครผู้ช่วยสอน</h4>
 
-                        <form>
+                        <form method="POST" enctype="multipart/form-data" action="{{ route('request.store') }}">
                             <h5 class="mb-3">แบบฟอร์มกรอกรายละเอียดผู้ช่วยสอน</h5>
 
                             <div class="row mb-3">
                                 <div class="col-md-1">
-                                        <input type="text" class="form-control" placeholder="คำนำหน้า"
-                                        value="{{ Auth::user()->prefix ?? 'N/A : คำนำหน้า' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="คำนำหน้า">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="ชื่อ"
-                                        value="{{ Auth::user()->fname ?? 'N/A : ชื่อ' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="ชื่อ">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="นามสกุล"
-                                        value="{{ Auth::user()->lname ?? 'N/A : นามสกุล' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="นามสกุล">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="tel" class="form-control" placeholder="รหัสนักศึกษา"
-                                        value="{{ Auth::user()->student_id ?? 'N/A : นักศึกษา' }}" disabled>
+                                    <input type="tel" class="form-control" placeholder="รหัสนักศึกษา">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="อีเมล"
-                                        value="{{ Auth::user()->email ?? 'N/A : อีเมล' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="อีเมล">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="รหัสบัตรประจำตัวประชาชน"
-                                        value="{{ Auth::user()->card_id ?? 'N/A : รหัสบัตรประจำตัวประชาชน' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="รหัสบัตรประจำตัวประชาชน">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์"
-                                        value="{{ Auth::user()->phone ?? 'N/A : เบอร์โทรศัพท์' }}" disabled>
+                                    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์">
                                 </div>
-
                             </div>
-
-
-                            <div class="mb-3">
+                            {{-- subject --}}
+                            {{-- <div class="mb-3">
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>เลือกรายวิชาที่ต้องการสมัคร</option>
                                     @foreach ($subjects as $subject)
@@ -59,12 +50,10 @@
                                             {{ $subject->name_en }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-
+                            </div> --}}
                             <div class="mb-3">
                                 <small class="text-danger">*** นักศึกษาสามารถเป็นผู้ช่วยสอนได้ไม่เกิน 3 รายวิชา</small>
                             </div>
-
                             <button type="submit" class="btn btn-success">ยืนยันการสมัคร</button>
                         </form>
                     </div>
