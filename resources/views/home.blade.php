@@ -11,7 +11,7 @@
                 <div class="card bg-primary text-white p-3">
                     <h4 class="mb-0">ประกาศ</h4>
                 </div>
-                @foreach($announces as $announce)
+                @foreach ($announces as $announce)
                 <div class="card mt-3"> 
                         <div class="card-body">
                             <h5 class="card-title">
@@ -19,7 +19,7 @@
                                 {{ $announce->title }}
                             </h5>
                             <p class="card-text">
-                                {{ $announce->content }} <!-- Assuming content is plain text -->
+                                {{ $announce->description }} <!-- Assuming content is plain text -->
                             </p>
                         </div>
                 </div>

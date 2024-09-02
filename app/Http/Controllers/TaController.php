@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subjects;
+use App\Models\Announce;
 
 
 class TaController extends Controller
@@ -68,5 +69,11 @@ class TaController extends Controller
     public function disbursements()
     {
         return view('layouts.ta.disbursements');
+    }
+
+    public function showAnnounces()
+    {
+        $announces = Announce::orderBy('created_at', 'desc')->get();
+        return view('home', compact('announces'));
     }
 }

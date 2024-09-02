@@ -9,6 +9,6 @@ class Announce extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content'];
+    protected $guarded = [];
     
 }
