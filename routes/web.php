@@ -22,6 +22,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/home', [TaController::class, 'showAnnounces'])->name('home');
     Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
+    Route::post('/request', [TAController::class, 'apply'])->name('ta.apply');
     Route::get('/statusrequest', [TaController::class, 'statusRequest'])->name('layout.ta.statusRequest');
     Route::get('/disbursements', [TaController::class, 'disbursements'])->name('layout.ta.disbursements');
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');

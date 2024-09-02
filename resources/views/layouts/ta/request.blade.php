@@ -12,7 +12,8 @@
                     <div class="container">
                         <h4 class="mb-4">ยื่นคำร้องสมัครผู้ช่วยสอน</h4>
 
-                        <form>
+                        <form method="POST" action="{{ route('ta.apply') }}">
+                            @csrf
                             <h5 class="mb-3">แบบฟอร์มกรอกรายละเอียดผู้ช่วยสอน</h5>
 
                             <div class="row mb-3">
