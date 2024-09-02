@@ -25,12 +25,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::resource('companie',RequestController::class);
-    // Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
+    Route::get('/home', [TaController::class, 'showAnnounces'])->name('home');
+    Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
     Route::get('/statusrequest', [TaController::class, 'statusRequest'])->name('layout.ta.statusRequest');
     Route::get('/disbursements', [TaController::class, 'disbursements'])->name('layout.ta.disbursements');
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');
-    Route::get('/home', [HomeController::class, 'showAnnouncements'])->name('home');
     Route::get('/attendances', [TaController::class, 'attendances'])->name('layout.ta.attendances');
 
 
@@ -40,13 +39,12 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home');
-    Route::post('/admin/add-announce', [HomeController::class, 'addAnnounce'])->name('admin.addAnnounce');
+    Route::resource('announces', AdminController::class);
+
     // Route::get('/admin/announce', [AdminController::class, 'announce'])->name('layout.admin.announce');
     Route::get('/admin/tausers', [AdminController::class, 'taUsers'])->name('layout.admin.taUsers');
     Route::get('/admin/detailsta', [AdminController::class, 'detailsTa'])->name('layout.admin.detailsTa');
     Route::get('/admin/detailsta/id', [AdminController::class, 'detailsByid'])->name('layout.admin.detailsByid');
-
-
 });
 
 //Teacher Routes List
