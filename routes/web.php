@@ -57,8 +57,6 @@ Route::middleware(['auth', 'user-access:teacher'])->group(function () {
     Route::get('/subject/subjectDetail/taDetail', [TeacherController::class, 'taDetail'])->name('taDetail');
 });
 
-Route::get('/ta/request', [RequestController::class, 'create'])->name('request.create');
-Route::post('/ta/request', [RequestController::class, 'store'])->name('request.store');
 
 Route::fallback(function () {
     return view('error\404');
