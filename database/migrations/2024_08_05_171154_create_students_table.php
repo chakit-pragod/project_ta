@@ -13,19 +13,20 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('prefix', 256);
             $table->string('student_id', 11);
-            $table->string('fName', 1024);
-            $table->string('lName', 1024);
+            $table->string('fname', 1024);
+            $table->string('lname', 1024);
             $table->string('card_id', 13);
             $table->string('phone', 11);
-            $table->string('email', 30);
-            $table->boolean('type_ta');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('subject_id');
+            $table->string('email', 1024);
+            // $table->boolean('type_ta');
+            // $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('subject_id');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('subject_id')->references('id')->on('subjects');
+            // $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
 

@@ -28,7 +28,7 @@ class AdminController extends Controller
     //     return view('layouts.admin.announce');
     // }
 
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -38,7 +38,7 @@ class AdminController extends Controller
         return view('layouts.admin.taUsers');
     }
 
-     /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable

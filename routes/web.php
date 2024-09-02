@@ -4,7 +4,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TaController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\RequestController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+// Route::resource('ta',RequestController::class);
+// Route::resource('admin',AdminController::class);
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -51,6 +56,9 @@ Route::middleware(['auth', 'user-access:teacher'])->group(function () {
     Route::get('/subject/subjectDetail', [TeacherController::class, 'subjectDetail'])->name('subjectDetail');
     Route::get('/subject/subjectDetail/taDetail', [TeacherController::class, 'taDetail'])->name('taDetail');
 });
+
+Route::get('/ta/request', [RequestController::class, 'create'])->name('request.create');
+Route::post('/ta/request', [RequestController::class, 'store'])->name('request.store');
 
 Route::fallback(function () {
     return view('error\404');
