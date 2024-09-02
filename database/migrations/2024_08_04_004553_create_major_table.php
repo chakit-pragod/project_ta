@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('name_th', 1024);
             $table->string('name_en', 1024);
             $table->enum('major_type', ['N', 'S']); // normal and specials
-            $table->integer('cur_id',10);
+            $table->unsignedBigInteger('cur_id');
             $table->char('status', 1);
             
-            $table->foreignId('cur_id')->constrained('curriculums')->onDelete('cascade');
+            $table->foreign('cur_id')->references('id')->on('curriculums')->onDelete('cascade');
             $table->timestamps();
         });
     }
