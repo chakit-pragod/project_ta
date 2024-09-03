@@ -22,11 +22,9 @@ return new class extends Migration
             $table->string('email', 1024);
             $table->boolean('type_ta');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('subject_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
 

@@ -16,7 +16,7 @@ class CurriculumsSubjectsSeeder extends Seeder
     {
         CurriculumsSubjects::create([
             'cur_id' => 1,
-            'subjects_id' => 1,
+            'subject_id' => 'CP352001',
         ]);
 
     }

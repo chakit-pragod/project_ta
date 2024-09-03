@@ -15,6 +15,8 @@ class Subjects extends Model
      * @var string
      */
     protected $table = 'subjects';
+    protected $keyType = 'string'; // กำหนดให้ primary key เป็น string
+    public $incrementing = false;  // ปิดการใช้งาน auto-increment
 
     /**
      * The attributes that are mass assignable.
