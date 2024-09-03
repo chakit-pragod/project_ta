@@ -370,7 +370,7 @@ class TeachersTableSeeder extends Seeder
             $user = DB::table('users')->where('email', $teacher['email'])->first();
 
             if ($user) {
-                DB::table('teachers')->insert([
+                Teachers::create([
                     'prefix' => $teacher['prefix'],
                     'position' => $teacher['position'],
                     'degree' => $teacher['degree'],

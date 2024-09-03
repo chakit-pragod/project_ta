@@ -53,7 +53,7 @@ class StudentsTableSeeder extends Seeder
             $user = DB::table('users')->where('email', $student['email'])->first();
 
             if ($user) {
-                DB::table('students')->insert([
+                Students::create([
                     'student_id' => $student['student_id'],
                     'prefix' => $student['prefix'],
                     'fname' => $student['fname'],
