@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('subject_id'); 
             $table->unsignedBigInteger('owner_teacher_id'); 
             $table->unsignedBigInteger('semesters_id'); 
-            $table->unsignedBigInteger('major_id'); 
+            $table->unsignedBigInteger('major_id')->nullable(); 
             $table->unsignedBigInteger('cur_id');
 
             $table->foreign('subject_id')->references('subject_id')->on('subjects');
