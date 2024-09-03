@@ -69,10 +69,7 @@ class TaController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function disbursements()
-    {
-        return view('layouts.ta.disbursements');
-    }
+
 
     public function showAnnounces()
     {
@@ -107,4 +104,7 @@ class TaController extends Controller
 
         return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
     }
+
+    
+
 }

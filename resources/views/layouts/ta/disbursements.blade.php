@@ -12,7 +12,9 @@
                     <div class="container">
                         <h4 class="mb-4">อัปโหลดเอกสารการเบิกจ่ายผู้ช่วยสอน</h4>
 
-                        <form>
+                        <form action="{{ route('layout.ta.disbursements') }}" method="post" enctype="multipart/form-data">
+
+                            @csrf
                             {{-- <h5 class="mb-3">แบบฟอร์มกรอกรายละเอียดผู้ช่วยสอน</h5> --}}
 
                             <div class="mb-3">
@@ -33,10 +35,10 @@
 
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="กรอกเลขบัญชีธนาคาร">
+                                    <input type="text" class="form-control" name="bookbank_id" placeholder="กรอกเลขบัญชีธนาคาร">
                                 </div>
                                 <div class="col-md-6">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" name="bank_name" aria-label="Default select example">
                                         <option selected>เลือกบัญชีธนาคาร</option>
                                         <option value="1">02 ธนาคารกรุงเทพ</option>
                                         <option value="2">04 ธนาคารกสิกรไทย</option>
@@ -49,9 +51,9 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="fileUpload" class="form-label">อัปโหลดตารางเรียน แบบแจ้งข้อมูลหนี้บุลคลากร
+                                <label for="fileUpload" class="form-label ">อัปโหลดตารางเรียน แบบแจ้งข้อมูลหนี้บุลคลากร
                                     สำเนาบัตรประชาชน สำเนาบัญชีธนาคาร </label>
-                                <input class="form-control" type="file" id="fileUpload">
+                                <input class="form-control" type="file" id="fileUpload" name="uploadfile">
                             </div>
 
                             <button type="submit" class="btn btn-success">ยืนยันการสมัคร</button>
