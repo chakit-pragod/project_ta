@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('curriculums_subjects', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('cur_id');
-            $table->unsignedBigInteger('subjects_id');
+            $table->string('subject_id');
             
             $table->foreign('cur_id')->references('id')->on('curriculums');
-            $table->foreign('subjects_id')->references('id')->on('subjects');
+            $table->foreign('subject_id')->references('subject_id')->on('subjects');
             $table->timestamps();
         });
     }
