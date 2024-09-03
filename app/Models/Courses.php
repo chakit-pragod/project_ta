@@ -50,7 +50,7 @@ class Courses extends Model
         return $this->belongsTo(Classes::class);
     }
 
-    public function course_ta() 
+    public function course_tas() 
     {
         return $this->hasMany(CourseTas::class);
     }

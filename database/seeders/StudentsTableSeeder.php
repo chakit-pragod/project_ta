@@ -23,8 +23,9 @@ class StudentsTableSeeder extends Seeder
         $students = [
             [
                 'student_id' => '643021316-6',
-                'fName' => 'ชาคริต',
-                'lName' => 'ปรากฎ',
+                'prefix' => 'นาย',
+                'fname' => 'ชาคริต',
+                'lname' => 'ปรากฎ',
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',

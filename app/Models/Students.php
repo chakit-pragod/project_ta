@@ -44,4 +44,9 @@ class Students extends Model
     {
         return $this->hasMany(Students::class);
     }
+
+    public function course_tas()
+    {
+        return $this->hasMany(Students::class);
+    }
 }

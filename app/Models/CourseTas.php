@@ -16,11 +16,11 @@ class CourseTas extends Model
 
     public function student()
     {
-        return $this->hasOne(Students::class);
+        return $this->belongsTo(Students::class);
     }
 
     public function courses()
     {
-        return $this->hasOne(Courses::class);
+        return $this->belongsTo(Courses::class);
     }
 }
