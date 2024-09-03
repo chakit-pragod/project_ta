@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TaController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -43,11 +44,12 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::resource('announces', AdminController::class);
-
     // Route::get('/admin/announce', [AdminController::class, 'announce'])->name('layout.admin.announce');
     Route::get('/admin/tausers', [AdminController::class, 'taUsers'])->name('layout.admin.taUsers');
     Route::get('/admin/detailsta', [AdminController::class, 'detailsTa'])->name('layout.admin.detailsTa');
     Route::get('/admin/detailsta/id', [AdminController::class, 'detailsByid'])->name('layout.admin.detailsByid');
+    Route::get('/fetchdata', [ApiController::class, 'fetchData']);
+
 });
 
 //Teacher Routes List
