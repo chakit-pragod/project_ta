@@ -21,7 +21,7 @@ php artisan db:seed
 
 10. php artisan db:seed --class=StudentsTableSeeder
 
-11. php artisan db:seed --class=TasTableSeeder
+11. php artisan db:seed --class=TasTableSeeder // ไม่ใช้
 
 12. php artisan db:seed --class=CoursesSeeder
 

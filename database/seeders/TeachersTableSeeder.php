@@ -104,7 +104,7 @@ class TeachersTableSeeder extends Seeder
                     'degree' => 'ดร.',
                     'fname' => 'ปัญญาพล',
                     'lname' => 'หอระตะ',
-                    'email' => 'pun@kku.ac.th',
+                    'email' => 'punhor1@kku.ac.th',
                     // 'user_id' => $user->id,
                 ],
                 [

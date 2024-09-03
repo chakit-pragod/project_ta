@@ -29,8 +29,7 @@ class StudentsTableSeeder extends Seeder
                 'card_id' => '1234567890123',
                 'phone' => '0823456789',
                 'email' => 'chakit.p@kkumail.com',
-                'user_id' => $users->id+2, //+2
-                'subject_id' => $subjects->id,
+                // 'user_id' => $users-> , //+2
                 'type_ta' => false,
             ],
             // [
@@ -47,8 +46,25 @@ class StudentsTableSeeder extends Seeder
             // ],
         ];
 
-        foreach ($students as $key => $value) {
-            Students::create($value);
+        // foreach ($students as $key => $value) {
+        //     Students::create($value);
+        // }
+        foreach ($students as $student) {
+            $user = DB::table('users')->where('email', $student['email'])->first();
+
+            if ($user) {
+                DB::table('students')->insert([
+                    'student_id' => $student['student_id'],
+                    'prefix' => $student['prefix'],
+                    'fname' => $student['fname'],
+                    'lname' => $student['lname'],
+                    'card_id' => $student['card_id'],
+                    'phone' => $student['phone'],
+                    'email' => $student['email'],
+                    'type_ta' => $student['type_ta'],
+                    'user_id' => $user->id,
+                ]);
+            }
         }
     }
 }
