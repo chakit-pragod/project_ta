@@ -14,7 +14,8 @@ class Disbursements extends Model
     protected $fillable = [
         'bookbank_id',
         'bank_name',
-        'uploadfile'
+        'uploadfile',
+        'student_id'
     ];
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Disbursements;
+use App\Models\Students;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -27,24 +28,29 @@ class DisbursementsController extends Controller
             'bookbank_id' => 'required|string',
             'bank_name' => 'required|string',
         ]);
+
         $user = Auth::user();
+        $student = Students::where('user_id', $user->id)->first();
+
+        if (!$student) {
+            return redirect()->back()->with('error', 'Student record not found.');
+        }
+
         $data = new Disbursements();
 
         if ($request->hasFile('uploadfile')) {
-            $path = $request->file('uploadfile')->store('assets');
+            $path = $request->file('uploadfile')->store('assets/fileUploads', 'public');
             $data->uploadfile = $path;
         }
 
         $data->bookbank_id = $request->bookbank_id;
         $data->bank_name = $request->bank_name;
-        $data->student_id = $user->student_id;
-        // $data->applicant_type = $request->applicantType;
+        $data->student_id = $student->id;
 
         $data->save();
 
         return redirect()->back()->with('success', 'File uploaded successfully.');
     }
-
     // public function show()
     // {
     //     $data = Disbursements::all();
