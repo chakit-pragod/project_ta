@@ -53,7 +53,7 @@
 
 
                             <div class="mb-3">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" name="subject_id" aria-label="Default select example">
                                     <option selected>เลือกรายวิชาที่ต้องการสมัคร</option>
                                     @foreach ($subjects as $subject)
                                         <option value="{{ $subject->id }}">{{ $subject->subject_id }}

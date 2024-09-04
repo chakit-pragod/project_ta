@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Courses;
 use Illuminate\Http\Request;
 use App\Models\Subjects;
 use App\Models\Announce;
 use App\Models\Students;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -86,8 +88,13 @@ class TaController extends Controller
     {
         $user = Auth::user();
 
+        // Validate the incoming request data
+        $request->validate([
+            'subject_id' => 'required|exists:subjects,subject_id',
+        ]);
+
         // Create or update the student record
-        Students::updateOrCreate(
+        $student = Students::updateOrCreate(
             ['user_id' => $user->id],
             [
                 'prefix' => $user->prefix,
@@ -98,13 +105,40 @@ class TaController extends Controller
                 'card_id' => $user->card_id,
                 'phone' => $user->phone,
                 'type_ta' => 0,
-                'subject_id' => 1,
             ]
         );
+        // Students::updateOrCreate(
+        //     ['user_id' => $user->id],
+        //     [
+        //         'prefix' => $user->prefix,
+        //         'fname' => $user->fname,
+        //         'lname' => $user->lname,
+        //         'student_id' => $user->student_id,
+        //         'email' => $user->email,
+        //         'card_id' => $user->card_id,
+        //         'phone' => $user->phone,
+        //         'type_ta' => 0,
+        //         // 'subject_id' => 1,
+        //     ]
+        // );
 
-        return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
+        // Find the corresponding course_id based on selected subject_id
+        $course = Courses::where('subject_id', $request->subject_id)->first();
+
+        if ($course) {
+            // Save the course_id and student_id to the course_ta table
+            DB::table('course_tas')->insert([
+                'student_id' => $student->id,
+                'course_id' => $course->id,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+
+            return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
+        } else {
+            return redirect()->route('layout.ta.request')->with('error', 'ไม่พบวิชาที่เลือกในตารางหลักสูตร');
+        }
+
+        //return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
     }
-
-    
-
 }
