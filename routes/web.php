@@ -38,6 +38,9 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/disbursements', [DisbursementsController::class, 'disbursements'])->name('layout.ta.disbursements');
     Route::post('/disbursements', [DisbursementsController::class, 'uploads'])->name('layout.ta.disbursements');
 
+    // Route::post('/apply-courseta', [TaController::class, 'applyCourseTa'])->name('apply.ta');
+
+
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');
     Route::get('/attendances', [TaController::class, 'attendances'])->name('layout.ta.attendances');
 

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Subjects;
 use App\Models\Announce;
 use App\Models\Students;
+use App\Models\CourseTas;
+use App\Models\Courses;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -107,38 +109,33 @@ class TaController extends Controller
                 'type_ta' => 0,
             ]
         );
-        // Students::updateOrCreate(
-        //     ['user_id' => $user->id],
-        //     [
-        //         'prefix' => $user->prefix,
-        //         'fname' => $user->fname,
-        //         'lname' => $user->lname,
-        //         'student_id' => $user->student_id,
-        //         'email' => $user->email,
-        //         'card_id' => $user->card_id,
-        //         'phone' => $user->phone,
-        //         'type_ta' => 0,
-        //         // 'subject_id' => 1,
-        //     ]
-        // );
 
-        // Find the corresponding course_id based on selected subject_id
-        $course = Courses::where('subject_id', $request->subject_id)->first();
+        // รับ subject_id ที่เลือกจากฟอร์ม
+        $subjectId = $request->input('subject_id');
+
+        // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
+        $course = Courses::where('subject_id', $subjectId)->first();
 
         if ($course) {
-            // Save the course_id and student_id to the course_ta table
-            DB::table('course_tas')->insert([
+            // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
+            $existingTA = CourseTas::where('student_id', $student->id)
+                                ->where('course_id', $course->id)
+                                ->first();
+
+            if ($existingTA) {
+                return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชานี้แล้ว');
+            }
+
+            // บันทึกข้อมูลลงใน course_ta
+            CourseTas::create([
                 'student_id' => $student->id,
                 'course_id' => $course->id,
-                'created_at' => now(),
-                'updated_at' => now(),
             ]);
 
-            return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
+            return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
         } else {
-            return redirect()->route('layout.ta.request')->with('error', 'ไม่พบวิชาที่เลือกในตารางหลักสูตร');
+            return redirect()->route('layout.ta.request')->with('error', 'ไม่พบรายวิชานี้ในระบบ');
         }
-
-        //return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
     }
+
 }
