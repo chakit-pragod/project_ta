@@ -18,7 +18,7 @@
 
                             <div class="row mb-3">
                                 <div class="col-md-1">
-                                        <input type="text" class="form-control" placeholder="คำนำหน้า"
+                                    <input type="text" class="form-control" placeholder="คำนำหน้า"
                                         value="{{ Auth::user()->prefix ?? 'N/A : คำนำหน้า' }}" disabled>
                                 </div>
                                 <div class="col-md-4">
@@ -53,14 +53,15 @@
 
 
                             <div class="mb-3">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" name="subject_id" aria-label="Default select example">
                                     <option selected>เลือกรายวิชาที่ต้องการสมัคร</option>
                                     @foreach ($subjects as $subject)
-                                        <option value="{{ $subject->id }}">{{ $subject->subject_id }}
+                                        <option value="{{ $subject->subject_id }}">{{ $subject->subject_id }}
                                             {{ $subject->name_en }}</option>
                                     @endforeach
                                 </select>
                             </div>
+
 
                             <div class="mb-3">
                                 <small class="text-danger">*** นักศึกษาสามารถเป็นผู้ช่วยสอนได้ไม่เกิน 3 รายวิชา</small>

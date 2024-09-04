@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Subjects;
 use App\Models\Announce;
 use App\Models\Students;
+use App\Models\CourseTas;
+use App\Models\Courses;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -87,7 +89,7 @@ class TaController extends Controller
         $user = Auth::user();
 
         // Create or update the student record
-        Students::updateOrCreate(
+        $student = Students::updateOrCreate(
             ['user_id' => $user->id],
             [
                 'prefix' => $user->prefix,
@@ -98,13 +100,35 @@ class TaController extends Controller
                 'card_id' => $user->card_id,
                 'phone' => $user->phone,
                 'type_ta' => 0,
-                'subject_id' => 1,
             ]
         );
 
-        return redirect()->route('layout.ta.request')->with('success', 'ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
-    }
+        // รับ subject_id ที่เลือกจากฟอร์ม
+        $subjectId = $request->input('subject_id');
 
-    
+        // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
+        $course = Courses::where('subject_id', $subjectId)->first();
+
+        if ($course) {
+            // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
+            $existingTA = CourseTas::where('student_id', $student->id)
+                                ->where('course_id', $course->id)
+                                ->first();
+
+            if ($existingTA) {
+                return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชานี้แล้ว');
+            }
+
+            // บันทึกข้อมูลลงใน course_ta
+            CourseTas::create([
+                'student_id' => $student->id,
+                'course_id' => $course->id,
+            ]);
+
+            return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
+        } else {
+            return redirect()->route('layout.ta.request')->with('error', 'ไม่พบรายวิชานี้ในระบบ');
+        }
+    }
 
 }

@@ -40,13 +40,13 @@
                                 <div class="col-md-6">
                                     <select class="form-select" name="bank_name" aria-label="Default select example">
                                         <option selected>เลือกบัญชีธนาคาร</option>
-                                        <option value="1">02 ธนาคารกรุงเทพ</option>
-                                        <option value="2">04 ธนาคารกสิกรไทย</option>
-                                        <option value="3">06 ธนาคารกรุงไทย</option>
-                                        <option value="4">11 ธนาคารทหารไทยธนชาติ</option>
-                                        <option value="5">14 ธนาคารไทยพาณิชย์</option>
-                                        <option value="6">25 ธนาคารกรุงศรีอยุธยา</option>
-                                        <option value="7">30 ธนาคารออมสิน</option>
+                                        <option value="02 ธนาคารกรุงเทพ">02 ธนาคารกรุงเทพ</option>
+                                        <option value="04 ธนาคารกสิกรไทย">04 ธนาคารกสิกรไทย</option>
+                                        <option value="06 ธนาคารกรุงไทย">06 ธนาคารกรุงไทย</option>
+                                        <option value="11 ธนาคารทหารไทยธนชาติ">11 ธนาคารทหารไทยธนชาติ</option>
+                                        <option value="14 ธนาคารไทยพาณิชย์">14 ธนาคารไทยพาณิชย์</option>
+                                        <option value="25 ธนาคารกรุงศรีอยุธยา">25 ธนาคารกรุงศรีอยุธยา</option>
+                                        <option value="30 ธนาคารออมสิน">30 ธนาคารออมสิน</option>
                                     </select>
                                 </div>
                             </div>
