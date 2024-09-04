@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->id();
-            $table->integer('section_num');
+            $table->id(); // 'id' คอลัมน์หลักที่เป็น AUTO_INCREMENT
+            $table->integer('section_num')->unsigned(); // ลบ AUTO_INCREMENT
             $table->string('title', 45);
             $table->unsignedBigInteger('class_type_id');
             $table->integer('open_num');
