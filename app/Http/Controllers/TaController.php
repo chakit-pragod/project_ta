@@ -8,7 +8,6 @@ use App\Models\Subjects;
 use App\Models\Announce;
 use App\Models\Students;
 use App\Models\CourseTas;
-use App\Models\Courses;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
