@@ -19,15 +19,16 @@
 
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="applicantType" id="oldApplicant">
-                                    <label class="form-check-label" for="oldApplicant">
+                                    <input class="form-check-input" type="radio" name="applicant_type" id="newApplicant"
+                                        value="0">
+                                    <label class="form-check-label" for="newApplicant">
                                         ผู้สมัครรายใหม่
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="applicantType" id="newApplicant"
-                                        checked>
-                                    <label class="form-check-label" for="newApplicant">
+                                    <input class="form-check-input" type="radio" name="applicant_type" id="oldApplicant"
+                                        value="1" checked>
+                                    <label class="form-check-label" for="oldApplicant">
                                         ผู้สมัครรายเดิม
                                     </label>
                                 </div>
@@ -35,7 +36,8 @@
 
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="bookbank_id" placeholder="กรอกเลขบัญชีธนาคาร">
+                                    <input type="text" class="form-control" name="bookbank_id"
+                                        placeholder="กรอกเลขบัญชีธนาคาร">
                                 </div>
                                 <div class="col-md-6">
                                     <select class="form-select" name="bank_name" aria-label="Default select example">

@@ -12,6 +12,7 @@ class Disbursements extends Model
     protected $table = 'disbursements';
 
     protected $fillable = [
+        'applicant_type',
         'bookbank_id',
         'bank_name',
         'uploadfile',

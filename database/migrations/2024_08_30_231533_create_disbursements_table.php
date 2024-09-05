@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('disbursements', function (Blueprint $table) {
             $table->id();
+            $table->integer('applicant_type');
             $table->string('bookbank_id');
             $table->string('bank_name');
             $table->string('uploadfile');
