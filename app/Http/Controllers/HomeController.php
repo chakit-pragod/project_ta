@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Requests;
 use Illuminate\Http\Request;
 use App\Models\Announce;
 use Illuminate\Support\Facades\Log;
@@ -35,8 +36,10 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        $announces = Announce::orderBy('created_at', 'desc')->get();
-        return view('adminHome', compact('announces'));
+        // $announces = Announce::orderBy('created_at', 'desc')->get();
+        // return view('adminHome', compact('announces'));
+        $requests = Requests::with(['courseTas.course.subjects', 'courseTas.student'])->get();
+        return view('adminHome', compact('requests'));
     }
 
 

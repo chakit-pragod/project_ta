@@ -48,7 +48,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 //Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
-    Route::get('/admin', [RequestsController::class, 'showCourseTas'])->name('admin.home');
+    Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home');
+    // Route::get('/admin', [RequestsController::class, 'showCourseTas'])->name('admin.home');
     // Route::get('/statusrequest', [RequestsController::class, 'showCourseTas'])->name('layout.ta.statusRequest');
 
     Route::resource('announces', AdminController::class);
