@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('course_id');
 
-            $table->string('status', 1);
+            $table->string('status', 1);  //approve , wait ,  not approve
             $table->string('comment', 255)->nullable();
             $table->dateTime('approved_at')->nullable();
             

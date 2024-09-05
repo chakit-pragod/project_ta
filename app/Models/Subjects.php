@@ -54,6 +54,6 @@ class Subjects extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Courses::class);
+        return $this->hasMany(Courses::class, 'subject_id', 'subject_id');
     }
 }

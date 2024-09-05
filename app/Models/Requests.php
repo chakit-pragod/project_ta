@@ -17,16 +17,9 @@ class Requests extends Model
         'status',
     ];
 
-    public function student()
-    {
-        return $this->belongsTo(CourseTas::class, 'student_id', 'student_id');
-    }
-
-    /**
-     * Get the course associated with the request from course_tas.
-     */
-    public function course()
-    {
-        return $this->belongsTo(CourseTas::class, 'course_id', 'course_id');
-    }
+    public function courseTas()
+{
+    return $this->belongsTo(CourseTas::class, 'course_id', 'course_id');
+}
+    
 }
