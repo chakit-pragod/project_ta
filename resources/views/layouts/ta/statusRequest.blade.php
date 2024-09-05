@@ -34,9 +34,19 @@
                                                 {{ $request->courseTas->course->subjects->name_en }}</td>
                                             <td>{{ $request->created_at ? $request->created_at->format('d-m-Y') : 'N/A' }}
                                             </td>
-                                            <td><span class="badge bg-success">อนุมัติ</span></td>
-                                            <td>20-5-2024</td>
-                                            <td></td>
+                                            <td>
+                                                @if ($request->status === 'W')
+                                                    <span class="badge bg-warning">รอดำเนินการ</span>
+                                                @elseif($request->status === 'N')
+                                                    <span class="badge bg-danger">ไม่อนุมัติ</span>
+                                                @elseif($request->status === 'A')
+                                                    <span class="badge bg-success">อนุมัติ</span>
+                                                @else
+                                                    <span class="badge bg-secondary">ไม่ระบุ</span>
+                                                @endif
+                                            </td>
+                                            <td>{{$request->approve_at}}</td>
+                                            <td>{{$request->comment}}</td>
                                         </tr>
                                     @endforeach
                                 </thead>
