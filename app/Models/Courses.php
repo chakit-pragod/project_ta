@@ -22,7 +22,7 @@ class Courses extends Model
 
     public function subjects()
     {
-        return $this->belongsTo(Subjects::class);
+        return $this->belongsTo(Subjects::class, 'subject_id', 'subject_id');
     }
 
     public function teachers()

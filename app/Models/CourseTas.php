@@ -16,13 +16,13 @@ class CourseTas extends Model
 
     public function student()
     {
-        return $this->belongsTo(Students::class);
+        return $this->belongsTo(Students::class, 'student_id', 'id');
     }
 
-    public function courses()
-    {
-        return $this->belongsTo(Courses::class);
-    }
+    public function course()
+{
+    return $this->belongsTo(Courses::class, 'course_id', 'id');
+}
 
     public function requests()
     {

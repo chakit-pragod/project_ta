@@ -4,11 +4,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TaController;
 use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\RequestController;
+use App\Http\Controllers\RequestsController;
 use App\Http\Controllers\DisbursementsController;
 use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 // Route::resource('ta',RequestController::class);
 // Route::resource('admin',AdminController::class);
@@ -32,7 +33,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [TaController::class, 'showAnnounces'])->name('home');
     Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
     Route::post('/request', [TAController::class, 'apply'])->name('ta.apply');
-    Route::get('/statusrequest', [TaController::class, 'statusRequest'])->name('layout.ta.statusRequest');
+    Route::get('/statusrequest', [RequestsController::class, 'showCourseTas'])->name('layout.ta.statusRequest');
 
     // Route::get('/disbursements', [TaController::class, 'disbursements'])->name('layout.ta.disbursements');
     Route::get('/disbursements', [DisbursementsController::class, 'disbursements'])->name('layout.ta.disbursements');

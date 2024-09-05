@@ -38,15 +38,15 @@ class TaController extends Controller
         return view('layouts.ta.request', compact('subjects'));
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function statusRequest()
-    {
-        return view('layouts.ta.statusRequest');
-    }
+    // /**
+    //  * Show the application dashboard.
+    //  *
+    //  * @return \Illuminate\Contracts\Support\Renderable
+    //  */
+    // public function statusRequest()
+    // {
+    //     return view('layouts.ta.statusRequest');
+    // }
     /**
      * Show the application dashboard.
      *
