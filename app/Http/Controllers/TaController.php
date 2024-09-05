@@ -113,6 +113,12 @@ class TaController extends Controller
         // รับ subject_id ที่เลือกจากฟอร์ม
         $subjectIds = $request->input('subject_id');
 
+        // ตรวจสอบว่านักศึกษานี้ได้สมัครเป็นผู้ช่วยสอนครบ 3 วิชาหรือยัง
+        $currentCourseCount = CourseTas::where('student_id', $student->id)->count();
+        if ($currentCourseCount + count($subjectIds) > 3) {
+            return redirect()->back()->with('error', 'คุณไม่สามารถสมัครเป็นผู้ช่วยสอนได้เกิน 3 วิชา');
+        }
+
         // // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
 
         // $course = Courses::where('subject_id', $subjectId)->first();
@@ -137,7 +143,7 @@ class TaController extends Controller
         // } else {
         //     return redirect()->route('layout.ta.request')->with('error', 'ไม่พบรายวิชานี้ในระบบ');
         // }
-        
+
         foreach ($subjectIds as $subjectId) {
             // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
             $course = Courses::where('subject_id', $subjectId)->first();
@@ -151,7 +157,7 @@ class TaController extends Controller
                 if ($existingTA) {
                     return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชา ' . $subjectId . ' แล้ว');
                 }
-                
+
                 // บันทึกข้อมูลลงใน course_ta
                 CourseTas::create([
                     'student_id' => $student->id,

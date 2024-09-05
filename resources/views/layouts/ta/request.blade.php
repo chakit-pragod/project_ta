@@ -91,7 +91,7 @@
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     {{ session('success') }}
                                     <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                        aria-label="Close"></button>
+                                        aria-label="Close">close</button>
                                 </div>
                             @elseif (session('error'))
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
