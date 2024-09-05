@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Subjects;
 use App\Models\Announce;
 use App\Models\Students;
+use App\Models\Requests;
 use App\Models\CourseTas;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -139,29 +140,38 @@ class TaController extends Controller
         // }
         
         foreach ($subjectIds as $subjectId) {
-            // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
+            // Find the course with the matching subject_id
             $course = Courses::where('subject_id', $subjectId)->first();
-
+    
             if ($course) {
-                // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
+                // Check if the user has already applied for this course
                 $existingTA = CourseTas::where('student_id', $student->id)
                     ->where('course_id', $course->id)
                     ->first();
-
+    
                 if ($existingTA) {
                     return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชา ' . $subjectId . ' แล้ว');
                 }
                 
-                // บันทึกข้อมูลลงใน course_ta
+                // Save to course_ta table
                 CourseTas::create([
                     'student_id' => $student->id,
                     'course_id' => $course->id,
                 ]);
+    
+                // Save to requests table
+                Requests::create([
+                    'student_id' => $student->id,
+                    'course_id' => $course->id,
+                    'status' => 'W', // Assuming 'P' means pending
+                ]);
+    
             } else {
                 return redirect()->back()->with('error', 'ไม่พบรายวิชา ' . $subjectId . ' ในระบบ');
             }
         }
-
+    
         return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
+
     }
 }
