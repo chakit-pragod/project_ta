@@ -10,6 +10,7 @@ use App\Models\Announce;
 use App\Models\Requests;
 use App\Models\CourseTas;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
 
@@ -186,12 +187,24 @@ class TaController extends Controller
 
         // ดึงข้อมูลจาก course_tas พร้อมกับข้อมูลจากตารางที่เกี่ยวข้อง
         $courseTas = CourseTas::with([
-            'course.subject',         // ดึงข้อมูล subject_id และ name_en
-            'course.semester',        // ดึงข้อมูลปีการศึกษา และเทอม
-            'course.teacher',         // ดึงข้อมูลอาจารย์
-            'course.curriculum',      // ดึงข้อมูลหลักสูตร
+            'course.subjects',         // ดึงข้อมูล subject_id และ name_en
+            'course.semesters',        // ดึงข้อมูลปีการศึกษา และเทอม
+            'course.teachers',         // ดึงข้อมูลอาจารย์
+            'course.curriculums',      // ดึงข้อมูลหลักสูตร
             'course.major'            // ดึงข้อมูลสาขา
         ])->where('student_id', $student->id)->get();
+
+        // วนลูปผ่านข้อมูล courseTas เพื่อประมวลผล major name_th
+        foreach ($courseTas as $courseTa) {
+            if (isset($courseTa->course->major->name_th)) {
+                // ใช้ Str::after() เพื่อดึงเฉพาะคำว่า "ภาคปกติ"
+                $courseTa->course->major->name_th = trim(Str::after($courseTa->course->major->name_th, ' '));
+            }
+            if (isset($courseTa->course->curriculums->name_th)) {
+                // ใช้ Str::before() เพื่อดึงเฉพาะชื่อสาขา
+                $courseTa->course->curriculums->name_th = trim(Str::before($courseTa->course->curriculums->name_th, ' '));
+            }
+        }
 
         return view('layouts.ta.taSubject', compact('courseTas'));
     }

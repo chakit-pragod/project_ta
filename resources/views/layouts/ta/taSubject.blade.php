@@ -31,15 +31,16 @@
                                     @foreach ($courseTas as $index => $courseTa)
                                         <tr>
                                             <td>{{ $index + 1 }}</td>
-                                            <td>{{ $courseTa->course->subject->subject_id }}</td>
-                                            <td>{{ $courseTa->course->subject->name_en }}</td>
-                                            <td>{{ $courseTa->course->semester->semesters }}/{{ $courseTa->course->semester->year }}
+                                            <td>{{ $courseTa->course->subjects->subject_id }}</td>
+                                            <td>{{ $courseTa->course->subjects->name_en }}</td>
+                                            <td>{{ $courseTa->course->semesters->semesters }}/{{ $courseTa->course->semesters->year }}
                                             </td>
-                                            <td>{{ $courseTa->course->teacher->prefix }}
-                                                {{ $courseTa->course->teacher->fname }}
-                                                {{ $courseTa->course->teacher->lname }}</td>
+                                            <td>{{ $courseTa->course->teachers->position }}
+                                                {{ $courseTa->course->teachers->degree }}
+                                                {{ $courseTa->course->teachers->fname }}
+                                                {{ $courseTa->course->teachers->lname }}</td>
+                                            <td>{{ $courseTa->course->curriculums->name_th }}</td>
                                             <td>{{ $courseTa->course->major->name_th ?? 'ไม่มีข้อมูล' }}</td>
-                                            <td>{{ $courseTa->course->curriculum->name_th }}</td>
                                             <td><a href="/attendances/{{ $courseTa->id }}">ลงเวลา</a></td>
                                         </tr>
                                     @endforeach

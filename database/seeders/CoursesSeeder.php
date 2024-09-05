@@ -24,7 +24,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP352001', 
                 'owner_teacher_id' => 23,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             //User Experience Design
@@ -33,7 +33,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP352002', 
                 'owner_teacher_id' => 11, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Web Programming and Application
@@ -42,7 +42,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP351203', 
                 'owner_teacher_id' => 29,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Operating Systems and System Calls Programming
@@ -51,7 +51,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP353001', 
                 'owner_teacher_id' => 14, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Fundamental Computer Science
@@ -60,7 +60,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP351001', 
                 'owner_teacher_id' => 15,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Software Quality Assurance
@@ -69,7 +69,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP353201', 
                 'owner_teacher_id' => 4, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Neural Network and Deep Learning
@@ -78,7 +78,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP353108', 
                 'owner_teacher_id' => 36,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Artificial Intelligence
@@ -87,7 +87,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP353003', 
                 'owner_teacher_id' => 25, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Introduction to Machine Learning
@@ -96,7 +96,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP353102', 
                 'owner_teacher_id' => 35,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Data Analytics and Application
@@ -105,7 +105,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP353103',
                 'owner_teacher_id' => 8, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Web Design Technologies
@@ -114,7 +114,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP352201', 
                 'owner_teacher_id' => 20,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Structure Programming Languages for Computer Science
@@ -123,7 +123,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP351002', 
                 'owner_teacher_id' => 3, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // Seminar in Computer Science
@@ -132,7 +132,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' => 'CP353761', 
                 'owner_teacher_id' => 3,
                 'semesters_id' => 25671,
-                'major_id' => null,
+                'major_id' => 1,
                 'cur_id' => 1, 
             ],
             // Principles of Software Design and Development 
@@ -141,7 +141,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP353002', 
                 'owner_teacher_id' => 1, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             [
@@ -149,7 +149,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC313002', 
                 'owner_teacher_id' => 1, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 1, 
             ],
             // IT
@@ -159,7 +159,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC361002', 
                 'owner_teacher_id' => 30, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Web Application Programming
@@ -168,7 +168,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362004', 
                 'owner_teacher_id' => 30, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Research Methodology
@@ -177,7 +177,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363762', 
                 'owner_teacher_id' => 30,
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Introduction to Computer Networking
@@ -186,7 +186,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  '362003', 
                 'owner_teacher_id' => 9, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Introduction to Computer Networking
@@ -195,7 +195,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  '342222', 
                 'owner_teacher_id' => 9, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Database Analysis and Design
@@ -204,7 +204,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362005', 
                 'owner_teacher_id' => 25, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Software Testing and Quality Assurance
@@ -213,7 +213,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363101', 
                 'owner_teacher_id' => 14, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Strategic Management of Information Technology
@@ -222,7 +222,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363002', 
                 'owner_teacher_id' => 23, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Business Intelligence System
@@ -231,7 +231,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363102', 
                 'owner_teacher_id' => 23, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Software Engineering
@@ -240,7 +240,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362102', 
                 'owner_teacher_id' => 31, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Systems Analysis and Design
@@ -249,7 +249,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363001', 
                 'owner_teacher_id' => 31, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Inspiration in IT Career
@@ -258,7 +258,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC361001', 
                 'owner_teacher_id' => 14, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Operating Systems
@@ -267,7 +267,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362001', 
                 'owner_teacher_id' => 15, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Data Serialization Languages and Applications
@@ -276,7 +276,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP363205', 
                 'owner_teacher_id' => 11, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Introduction To Information And Communication Technology
@@ -285,7 +285,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC320001', 
                 'owner_teacher_id' => 32, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Web Design Technologies
@@ -294,7 +294,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362201', 
                 'owner_teacher_id' => 21, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Digital Logic and Embedded Systems
@@ -303,7 +303,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC362301', 
                 'owner_teacher_id' => 22, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // Information Technology Profession
@@ -312,7 +312,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'SC363003', 
                 'owner_teacher_id' => 22, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 2, 
             ],
             // GIS
@@ -322,7 +322,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP350002', 
                 'owner_teacher_id' => 12, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // Basics of Information Technology
@@ -331,7 +331,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP371031', 
                 'owner_teacher_id' => 2, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // Introduction to Geographic Information System
@@ -340,7 +340,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP372002', 
                 'owner_teacher_id' => 6, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // Fundamentals of Remote Sensing
@@ -349,7 +349,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP372011', 
                 'owner_teacher_id' => 20, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // Spatial Database Management
@@ -358,7 +358,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP373232', 
                 'owner_teacher_id' => 2, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // Unmanned Aerial Vehicle Mapping
@@ -367,7 +367,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP373112', 
                 'owner_teacher_id' => 6, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 3, 
             ],
             // CY
@@ -377,7 +377,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP422011', 
                 'owner_teacher_id' => 9, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Software Design and Analysis
@@ -386,7 +386,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP421025', 
                 'owner_teacher_id' => 31, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Database Architecture Analysis and Design
@@ -395,7 +395,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP422022', 
                 'owner_teacher_id' => 29, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Cybersecurity Law and Ethic
@@ -404,7 +404,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP422001', 
                 'owner_teacher_id' => 5, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Introduction to Operating System
@@ -413,7 +413,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP422052', 
                 'owner_teacher_id' => 5, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Inspiration in Cybersecurity Career
@@ -422,7 +422,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP421011', 
                 'owner_teacher_id' => 32, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Web and Mobile Application Architecture
@@ -431,7 +431,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP422021', 
                 'owner_teacher_id' => 32, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // Structured Programming
@@ -440,7 +440,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP421021', 
                 'owner_teacher_id' => 35, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 5, 
             ],
             // AI
@@ -450,7 +450,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP411106', 
                 'owner_teacher_id' => 29, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Artificial Intelligence Inspiration
@@ -459,7 +459,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP411701', 
                 'owner_teacher_id' => 26, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Artificial Intelligence Workshop I
@@ -468,7 +468,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP412703', 
                 'owner_teacher_id' => 26, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Machine Learning
@@ -477,7 +477,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP412002', 
                 'owner_teacher_id' => 36, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Data Science
@@ -486,7 +486,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP412003', 
                 'owner_teacher_id' => 37, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Neural Network and Deep Learning
@@ -495,7 +495,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP412004', 
                 'owner_teacher_id' => 37, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
             // Data Structures and Algorithms
@@ -504,7 +504,7 @@ class CoursesSeeder extends Seeder
                 'subject_id' =>  'CP411107', 
                 'owner_teacher_id' => 22, 
                 'semesters_id' => 25671,
-                'major_id' => null, 
+                'major_id' => 1, 
                 'cur_id' => 4, 
             ],
         ];
