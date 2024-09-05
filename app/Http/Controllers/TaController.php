@@ -169,7 +169,8 @@ class TaController extends Controller
                 Requests::create([
                     'student_id' => $student->id,
                     'course_id' => $course->id,
-                    'status' => 'W', // Assuming 'P' means pending
+                    'status' => 'W',
+                     // Assuming 'P' means pending
                 ]);
             } else {
                 return redirect()->back()->with('error', 'ไม่พบรายวิชา ' . $subjectId . ' ในระบบ');
