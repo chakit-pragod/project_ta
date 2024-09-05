@@ -32,7 +32,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/home', [TaController::class, 'showAnnounces'])->name('home');
     Route::get('/request', [TaController::class, 'request'])->name('layout.ta.request');
-    Route::post('/request', [TAController::class, 'apply'])->name('ta.apply');
+    Route::post('/request', [TaController::class, 'apply'])->name('ta.apply');
+    Route::get('/taSubject', [TaController::class, 'showCourseTas'])->name('layouts.ta.taSubject');
     Route::get('/statusrequest', [RequestsController::class, 'showCourseTas'])->name('layout.ta.statusRequest');
 
     // Route::get('/disbursements', [TaController::class, 'disbursements'])->name('layout.ta.disbursements');
@@ -40,12 +41,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('/disbursements', [DisbursementsController::class, 'uploads'])->name('layout.ta.disbursements');
 
     // Route::post('/apply-courseta', [TaController::class, 'applyCourseTa'])->name('apply.ta');
-
-
     Route::get('/tasubject', [TaController::class, 'taSubject'])->name('layout.ta.taSubject');
     Route::get('/attendances', [TaController::class, 'attendances'])->name('layout.ta.attendances');
-
-
 });
 
 //Admin Routes List
