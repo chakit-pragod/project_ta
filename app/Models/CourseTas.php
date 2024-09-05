@@ -23,4 +23,9 @@ class CourseTas extends Model
     {
         return $this->belongsTo(Courses::class);
     }
+
+    public function requests()
+    {
+        return $this->hasMany(Requests::class);
+    }
 }
