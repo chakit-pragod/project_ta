@@ -27,22 +27,22 @@ class Courses extends Model
 
     public function teachers()
     {
-        return $this->belongsTo(Teachers::class);
+        return $this->belongsTo(Teachers::class, 'owner_teacher_id');
     }
 
     public function semesters()
     {
-        return $this->belongsTo(Semesters::class);
+        return $this->belongsTo(Semesters::class, 'semesters_id');
     }
 
     public function major()
     {
-        return $this->belongsTo(Major::class);
+        return $this->belongsTo(Major::class, 'major_id');
     }
     
     public function curriculums()
     {
-        return $this->belongsTo(Curriculums::class);
+        return $this->belongsTo(Curriculums::class, 'cur_id');
     }
 
     public function classes()

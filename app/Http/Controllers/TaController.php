@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Courses;
 use Illuminate\Http\Request;
 use App\Models\Subjects;
-use App\Models\Announce;
 use App\Models\Students;
+use App\Models\Announce;
 use App\Models\Requests;
 use App\Models\CourseTas;
 use Illuminate\Support\Facades\Auth;
@@ -148,13 +148,13 @@ class TaController extends Controller
         foreach ($subjectIds as $subjectId) {
             // Find the course with the matching subject_id
             $course = Courses::where('subject_id', $subjectId)->first();
-    
+
             if ($course) {
                 // Check if the user has already applied for this course
                 $existingTA = CourseTas::where('student_id', $student->id)
                     ->where('course_id', $course->id)
                     ->first();
-    
+
                 if ($existingTA) {
                     return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชา ' . $subjectId . ' แล้ว');
                 }
@@ -164,20 +164,35 @@ class TaController extends Controller
                     'student_id' => $student->id,
                     'course_id' => $course->id,
                 ]);
-    
+
                 // Save to requests table
                 Requests::create([
                     'student_id' => $student->id,
                     'course_id' => $course->id,
                     'status' => 'W', // Assuming 'P' means pending
                 ]);
-    
             } else {
                 return redirect()->back()->with('error', 'ไม่พบรายวิชา ' . $subjectId . ' ในระบบ');
             }
         }
-    
-        return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
 
+        return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
+    }
+
+    public function showCourseTas()
+    {
+        $user = Auth::user();
+        $student = Students::where('user_id', $user->id)->first();
+
+        // ดึงข้อมูลจาก course_tas พร้อมกับข้อมูลจากตารางที่เกี่ยวข้อง
+        $courseTas = CourseTas::with([
+            'course.subject',         // ดึงข้อมูล subject_id และ name_en
+            'course.semester',        // ดึงข้อมูลปีการศึกษา และเทอม
+            'course.teacher',         // ดึงข้อมูลอาจารย์
+            'course.curriculum',      // ดึงข้อมูลหลักสูตร
+            'course.major'            // ดึงข้อมูลสาขา
+        ])->where('student_id', $student->id)->get();
+
+        return view('layouts.ta.taSubject', compact('courseTas'));
     }
 }

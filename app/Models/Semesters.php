@@ -24,7 +24,7 @@ class Semesters extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Courses::class);
+        return $this->belongsTo(Courses::class, 'semesters_id');
     }
 
     public function classes()
