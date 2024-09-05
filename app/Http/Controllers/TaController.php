@@ -91,7 +91,8 @@ class TaController extends Controller
 
         // Validate the incoming request data
         $request->validate([
-            'subject_id' => 'required|exists:subjects,subject_id',
+            'subject_id' => 'required|array|min:1|max:3', // ตรวจสอบว่าเลือกอย่างน้อย 1 วิชา และเลือกไม่เกิน 3 วิชา
+            'subject_id*' => 'exists|exists:subjects,subject_id', // ตรวจสอบว่าแต่ละวิชาที่เลือกมีอยู่ในฐานข้อมูล
         ]);
 
         // Create or update the student record
@@ -110,31 +111,57 @@ class TaController extends Controller
         );
 
         // รับ subject_id ที่เลือกจากฟอร์ม
-        $subjectId = $request->input('subject_id');
+        $subjectIds = $request->input('subject_id');
 
-        // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
-        $course = Courses::where('subject_id', $subjectId)->first();
+        // // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
 
-        if ($course) {
-            // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
-            $existingTA = CourseTas::where('student_id', $student->id)
-                                ->where('course_id', $course->id)
-                                ->first();
+        // $course = Courses::where('subject_id', $subjectId)->first();
 
-            if ($existingTA) {
-                return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชานี้แล้ว');
+        // if ($course) {
+        //     // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
+        //     $existingTA = CourseTas::where('student_id', $student->id)
+        //         ->where('course_id', $course->id)
+        //         ->first();
+
+        //     if ($existingTA) {
+        //         return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชานี้แล้ว');
+        //     }
+
+        //     // บันทึกข้อมูลลงใน course_ta
+        //     CourseTas::create([
+        //         'student_id' => $student->id,
+        //         'course_id' => $course->id,
+        //     ]);
+
+        //     return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
+        // } else {
+        //     return redirect()->route('layout.ta.request')->with('error', 'ไม่พบรายวิชานี้ในระบบ');
+        // }
+        
+        foreach ($subjectIds as $subjectId) {
+            // ค้นหา course ที่มี subject_id ตรงกันในตาราง courses
+            $course = Courses::where('subject_id', $subjectId)->first();
+
+            if ($course) {
+                // ตรวจสอบว่าผู้ใช้ได้สมัครเป็น TA สำหรับวิชานี้หรือยัง
+                $existingTA = CourseTas::where('student_id', $student->id)
+                    ->where('course_id', $course->id)
+                    ->first();
+
+                if ($existingTA) {
+                    return redirect()->back()->with('error', 'คุณได้สมัครเป็นผู้ช่วยสอนในวิชา ' . $subjectId . ' แล้ว');
+                }
+                
+                // บันทึกข้อมูลลงใน course_ta
+                CourseTas::create([
+                    'student_id' => $student->id,
+                    'course_id' => $course->id,
+                ]);
+            } else {
+                return redirect()->back()->with('error', 'ไม่พบรายวิชา ' . $subjectId . ' ในระบบ');
             }
-
-            // บันทึกข้อมูลลงใน course_ta
-            CourseTas::create([
-                'student_id' => $student->id,
-                'course_id' => $course->id,
-            ]);
-
-            return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
-        } else {
-            return redirect()->route('layout.ta.request')->with('error', 'ไม่พบรายวิชานี้ในระบบ');
         }
-    }
 
+        return redirect()->route('layout.ta.request')->with('success', 'สมัครเป็นผู้ช่วยสอนสำเร็จ');
+    }
 }
