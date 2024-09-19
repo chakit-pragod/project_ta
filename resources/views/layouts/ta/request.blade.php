@@ -114,8 +114,8 @@
 
                             function updateSelectedSubjects() {
                                 const selectedCheckboxes = Array.from(document.querySelectorAll('.subject-checkbox:checked'));
-                                const selectedSubjects = selectedCheckboxes.map(checkbox => checkbox.nextElementSibling.textContent.trim())
-                                    .join(', ');
+                                // const selectedSubjects = selectedCheckboxes.map(checkbox => checkbox.nextElementSibling.textContent.trim()).join(', ');
+                                const selectedSubjects = selectedCheckboxes.map(checkbox => checkbox.value).join(', ');
 
                                 if (selectedCheckboxes.length > 0) {
                                     document.getElementById('selectedSubjects').textContent = selectedSubjects;
